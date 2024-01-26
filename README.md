@@ -11,6 +11,7 @@ npm install react-native-expofp
 ## Running the project
 ```sh
 yarn install
+cd example/ios && pod install && cd ../../
 yarn example run ios
 yarn example run android
 ```
