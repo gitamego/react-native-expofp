@@ -6,7 +6,7 @@ import { ExpofpView } from 'react-native-expofp';
 export default function App() {
   return (
     <View style={styles.container}>
-      <ExpofpView color="#32a852" style={styles.box} />
+      <ExpofpView style={styles.box} url="https://demo.expofp.com" />
     </View>
   );
 }
@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box: {
-    width: 60,
-    height: 60,
+    width: '100%',
+    height: '100%',
     marginVertical: 20,
   },
 });

@@ -3,54 +3,63 @@ import SwiftUI
 
 @objc(ExpofpViewManager)
 class ExpofpViewManager: RCTViewManager {
-
-  override func view() -> (ExpofpView) {
-    return ExpofpView()
-  }
-
-  @objc override static func requiresMainQueueSetup() -> Bool {
-    return false
-  }
+    
+    override func view() -> ExpoFPViewProxy? {
+        return ExpoFPViewProxy()
+    }
+    
+    @objc override static func requiresMainQueueSetup() -> Bool {
+        return true
+    }
 }
 
-class ExpofpView : UIView {
-
-  @objc var color: String = "" {
-    didSet {
-      self.backgroundColor = hexStringToUIColor(hexColor: color)
-    }
-  }
-
+class ExpoFPViewProxy: UIView {
     
-    var body: some Scene {
-            WindowGroup {
-                VStack
-                {
-                    fplanView.onAppear{
-                        fplanView.load("https://demo.expofp.com")
-                    }
-                    .onDisappear {
-                        fplanView.destoy()
-                    }
-                }
+    var returningView: UIView?
+    let dataStore: ExpoFPDataStore = .init()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        let vc = UIHostingController(rootView: ExpoFP().environmentObject(dataStore))
+        vc.view.frame = bounds
+        self.addSubview(vc.view)
+        self.returningView = vc.view
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc var url: NSString = "" {
+        didSet{
+            dataStore.url = url
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.returningView?.frame = bounds
+    }
+    
+}
+
+class ExpoFPDataStore: ObservableObject {
+    @Published var url: NSString = ""
+}
+
+struct ExpoFP: View {
+    @EnvironmentObject var dataStore: ExpoFPDataStore
+    var fplanView = FplanView()
+    
+    var body: some View {
+        VStack
+        {
+            fplanView.onAppear{
+                fplanView.load(dataStore.url as String)
+            }
+            .onDisappear {
+                fplanView.destoy()
             }
         }
-    
-  func hexStringToUIColor(hexColor: String) -> UIColor {
-    
-    var _color: String = "#ff3030"
-    let stringScanner = Scanner(string: _color)
-
-    if(_color.hasPrefix("#")) {
-      stringScanner.scanLocation = 1
     }
-    var color: UInt32 = 0
-    stringScanner.scanHexInt32(&color)
-
-    let r = CGFloat(Int(color >> 16) & 0x000000FF)
-    let g = CGFloat(Int(color >> 8) & 0x000000FF)
-    let b = CGFloat(Int(color) & 0x000000FF)
-
-    return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1)
-  }
 }
