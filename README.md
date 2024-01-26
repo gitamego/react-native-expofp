@@ -22,7 +22,7 @@ import { ExpofpView } from "react-native-expofp";
 
 // ...
 
-<ExpofpView color="tomato" />
+<ExpofpView url="https://demo.expofp.com/" />
 ```
 
 ## Contributing
