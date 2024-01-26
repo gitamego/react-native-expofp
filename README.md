@@ -8,6 +8,13 @@ React Native library for displaying expo plans
 npm install react-native-expofp
 ```
 
+## Running the project
+```sh
+yarn install
+yarn example run ios
+yarn example run android
+```
+
 ## Usage
 
 ```js
