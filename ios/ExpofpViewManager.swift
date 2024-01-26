@@ -1,3 +1,6 @@
+import ExpoFpFplan
+import SwiftUI
+
 @objc(ExpofpViewManager)
 class ExpofpViewManager: RCTViewManager {
 
@@ -18,10 +21,27 @@ class ExpofpView : UIView {
     }
   }
 
+    
+    var body: some Scene {
+            WindowGroup {
+                VStack
+                {
+                    fplanView.onAppear{
+                        fplanView.load("https://demo.expofp.com")
+                    }
+                    .onDisappear {
+                        fplanView.destoy()
+                    }
+                }
+            }
+        }
+    
   func hexStringToUIColor(hexColor: String) -> UIColor {
-    let stringScanner = Scanner(string: hexColor)
+    
+    var _color: String = "#ff3030"
+    let stringScanner = Scanner(string: _color)
 
-    if(hexColor.hasPrefix("#")) {
+    if(_color.hasPrefix("#")) {
       stringScanner.scanLocation = 1
     }
     var color: UInt32 = 0
