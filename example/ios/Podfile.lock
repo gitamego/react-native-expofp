@@ -2,9 +2,10 @@ PODS:
   - boost (1.83.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
-  - ExpoFpCommon (3.0.3)
-  - ExpoFpFplan (3.0.3):
-    - ExpoFpCommon (~> 3.0.3)
+  - ExpoFpCommon (4.0.7)
+  - ExpoFpFplan (4.0.7):
+    - ExpoFpCommon (= 4.0.7)
+    - ZIPFoundation (= 0.9.16)
   - FBLazyVector (0.73.2)
   - FBReactNativeSpec (0.73.2):
     - RCT-Folly (= 2022.05.16.00)
@@ -948,7 +949,7 @@ PODS:
     - glog
     - React-debug
   - react-native-expofp (0.1.0):
-    - ExpoFpFplan
+    - ExpoFpFplan (= 4.0.7)
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
@@ -1121,6 +1122,7 @@ PODS:
     - React-perflogger (= 0.73.2)
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
+  - ZIPFoundation (0.9.16)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
@@ -1215,6 +1217,7 @@ SPEC REPOS:
     - libevent
     - OpenSSL-Universal
     - SocketRocket
+    - ZIPFoundation
 
 EXTERNAL SOURCES:
   boost:
@@ -1321,8 +1324,8 @@ SPEC CHECKSUMS:
   boost: d3f49c53809116a5d38da093a8aa78bf551aed09
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: fea03f2699887d960129cc54bba7e52542b6f953
-  ExpoFpCommon: 1e75552665a2444bafe9265985ad4ba4b976b9d7
-  ExpoFpFplan: ff7ac1f7df97aa5d2b7493f18d407e04b857a84f
+  ExpoFpCommon: 48c061c9567950e908bc28afca5f4f1ab734287c
+  ExpoFpFplan: eb216ce27c5877c3508c0f1b974b4443045c7f48
   FBLazyVector: fbc4957d9aa695250b55d879c1d86f79d7e69ab4
   FBReactNativeSpec: 86de768f89901ef6ed3207cd686362189d64ac88
   Flipper: c7a0093234c4bdd456e363f2f19b2e4b27652d44
@@ -1359,7 +1362,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 03644c063fc3621c9a4e8bf263a8150909129618
   React-logger: 66b168e2b2bee57bd8ce9e69f739d805732a5570
   React-Mapbuffer: 9ee041e1d7be96da6d76a251f92e72b711c651d6
-  react-native-expofp: 0c80137711c6b8d1970b1a5a7caaf7ae01b40b46
+  react-native-expofp: 44985252c7d5951a78f6ec75d4e0ff5ce34a3dbe
   React-nativeconfig: d753fbbc8cecc8ae413d615599ac378bbf6999bb
   React-NativeModulesApple: 964f4eeab1b4325e8b6a799cf4444c3fd4eb0a9c
   React-perflogger: 29efe63b7ef5fbaaa50ef6eaa92482f98a24b97e
@@ -1382,6 +1385,7 @@ SPEC CHECKSUMS:
   ReactCommon: 45b5d4f784e869c44a6f5a8fad5b114ca8f78c53
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 13c8ef87792450193e117976337b8527b49e8c03
+  ZIPFoundation: d170fa8e270b2a32bef9dcdcabff5b8f1a5deced
 
 PODFILE CHECKSUM: f1bcb21c38cb1bee48a2d55f3f3b9ca2caa2cc42
 
