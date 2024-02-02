@@ -1,5 +1,6 @@
 import ExpoFpFplan
 import SwiftUI
+//import ExpoFpCrowdConnected
 
 @objc(ExpofpViewManager)
 class ExpofpViewManager: RCTViewManager {
@@ -50,6 +51,7 @@ class ExpoFPDataStore: ObservableObject {
 struct ExpoFP: View {
     @EnvironmentObject var dataStore: ExpoFPDataStore
     var fplanView = FplanView()
+    //let locationProvider: LocationProvider = CrowdConnectedProvider(Settings("APP_KEY", "TOKEN", "SECRET"))
     
     var body: some View {
         VStack
