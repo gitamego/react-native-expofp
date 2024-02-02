@@ -922,6 +922,12 @@ PODS:
     - glog
     - React-debug
   - react-native-expofp (0.1.0):
+    - AWSAuthCore
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSMobileClient
+    - ExpoFpCrowdConnected (= 4.0.2)
     - ExpoFpFplan (= 4.0.2)
     - glog
     - RCT-Folly (= 2022.05.16.00)
@@ -1321,7 +1327,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 03644c063fc3621c9a4e8bf263a8150909129618
   React-logger: 66b168e2b2bee57bd8ce9e69f739d805732a5570
   React-Mapbuffer: f40e0ea0df8161075390332dfcb0496442c09371
-  react-native-expofp: d9368b3bd6d5be1f37446649cc9005156ba4c828
+  react-native-expofp: da19b0972c09050500514416d94abc2d85761a93
   React-nativeconfig: 4dda3cbbdd1c4ce38450bb10b34b3e54120e4a91
   React-NativeModulesApple: d25a530c61e94fb317a0124b1cde1c459e4a47d3
   React-perflogger: 29efe63b7ef5fbaaa50ef6eaa92482f98a24b97e

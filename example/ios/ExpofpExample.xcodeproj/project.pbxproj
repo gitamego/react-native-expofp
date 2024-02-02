@@ -11,23 +11,22 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		6C90E479ABF89AC7B324A6BE /* Pods_ExpofpExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A82348EDCF9196A09C9133 /* Pods_ExpofpExample.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8C0467E82B6CF51400B6A972 /* AWSAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DA2B6CF4E800B6A972 /* AWSAuthCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467E92B6CF51400B6A972 /* AWSAuthCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DA2B6CF4E800B6A972 /* AWSAuthCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467EB2B6CF51600B6A972 /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DC2B6CF4F200B6A972 /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467EC2B6CF51600B6A972 /* AWSCognitoIdentityProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DC2B6CF4F200B6A972 /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467ED2B6CF51700B6A972 /* AWSCognitoIdentityProviderASF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DE2B6CF4F700B6A972 /* AWSCognitoIdentityProviderASF.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467EE2B6CF51700B6A972 /* AWSCognitoIdentityProviderASF.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DE2B6CF4F700B6A972 /* AWSCognitoIdentityProviderASF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467EF2B6CF51900B6A972 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E02B6CF4FD00B6A972 /* AWSCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467F02B6CF51900B6A972 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E02B6CF4FD00B6A972 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467F12B6CF51A00B6A972 /* AWSKinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E22B6CF50200B6A972 /* AWSKinesis.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467F22B6CF51A00B6A972 /* AWSKinesis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E22B6CF50200B6A972 /* AWSKinesis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467F32B6CF51B00B6A972 /* AWSMobileClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E42B6CF50700B6A972 /* AWSMobileClient.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467F42B6CF51B00B6A972 /* AWSMobileClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E42B6CF50700B6A972 /* AWSMobileClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467F52B6CF51D00B6A972 /* AWSPinpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E62B6CF50C00B6A972 /* AWSPinpoint.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467F62B6CF51D00B6A972 /* AWSPinpoint.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E62B6CF50C00B6A972 /* AWSPinpoint.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8CCAE46F2B6B06F80036C662 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCAE46E2B6B06F80036C662 /* AWSMobileClient.swift */; };
+		8C0468052B6D080C00B6A972 /* AWSAuthCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467FD2B6D080900B6A972 /* AWSAuthCore.xcframework */; };
+		8C0468062B6D080C00B6A972 /* AWSAuthCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467FD2B6D080900B6A972 /* AWSAuthCore.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C0468082B6D080D00B6A972 /* AWSCognitoIdentityProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467FB2B6D080700B6A972 /* AWSCognitoIdentityProvider.xcframework */; };
+		8C0468092B6D080D00B6A972 /* AWSCognitoIdentityProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467FB2B6D080700B6A972 /* AWSCognitoIdentityProvider.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C04680A2B6D080F00B6A972 /* AWSCognitoIdentityProviderASF.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467F92B6D080600B6A972 /* AWSCognitoIdentityProviderASF.xcframework */; };
+		8C04680B2B6D080F00B6A972 /* AWSCognitoIdentityProviderASF.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467F92B6D080600B6A972 /* AWSCognitoIdentityProviderASF.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C04680C2B6D081000B6A972 /* AWSCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467FC2B6D080800B6A972 /* AWSCore.xcframework */; };
+		8C04680D2B6D081000B6A972 /* AWSCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467FC2B6D080800B6A972 /* AWSCore.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C04680E2B6D081100B6A972 /* AWSKinesis.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467FA2B6D080700B6A972 /* AWSKinesis.xcframework */; };
+		8C04680F2B6D081100B6A972 /* AWSKinesis.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467FA2B6D080700B6A972 /* AWSKinesis.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C0468122B6D081400B6A972 /* AWSPinpoint.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467F82B6D080600B6A972 /* AWSPinpoint.xcframework */; };
+		8C0468132B6D081500B6A972 /* AWSPinpoint.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467F82B6D080600B6A972 /* AWSPinpoint.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C0468162B6D0AA900B6A972 /* AWSMobileClientXCF.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0468142B6D0AA000B6A972 /* AWSMobileClientXCF.xcframework */; };
+		8C0468172B6D0AA900B6A972 /* AWSMobileClientXCF.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0468142B6D0AA000B6A972 /* AWSMobileClientXCF.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C6DB4452B6D22E800D627F2 /* Pods_ExpofpExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A82348EDCF9196A09C9133 /* Pods_ExpofpExample.framework */; };
 		8CF26BF72B6AE2470041407A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF26BF62B6AE2470041407A /* File.swift */; };
 		9DFA68C449A4D2E7984D58DD /* Pods_ExpofpExample_ExpofpExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06B5EDA1811AA44321889BC /* Pods_ExpofpExample_ExpofpExampleTests.framework */; };
 /* End PBXBuildFile section */
@@ -43,19 +42,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8C0467EA2B6CF51500B6A972 /* Embed Frameworks */ = {
+		8C0468072B6D080C00B6A972 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8C0467EE2B6CF51700B6A972 /* AWSCognitoIdentityProviderASF.framework in Embed Frameworks */,
-				8C0467F62B6CF51D00B6A972 /* AWSPinpoint.framework in Embed Frameworks */,
-				8C0467F02B6CF51900B6A972 /* AWSCore.framework in Embed Frameworks */,
-				8C0467E92B6CF51400B6A972 /* AWSAuthCore.framework in Embed Frameworks */,
-				8C0467F42B6CF51B00B6A972 /* AWSMobileClient.framework in Embed Frameworks */,
-				8C0467F22B6CF51A00B6A972 /* AWSKinesis.framework in Embed Frameworks */,
-				8C0467EC2B6CF51600B6A972 /* AWSCognitoIdentityProvider.framework in Embed Frameworks */,
+				8C0468172B6D0AA900B6A972 /* AWSMobileClientXCF.xcframework in Embed Frameworks */,
+				8C04680B2B6D080F00B6A972 /* AWSCognitoIdentityProviderASF.xcframework in Embed Frameworks */,
+				8C04680F2B6D081100B6A972 /* AWSKinesis.xcframework in Embed Frameworks */,
+				8C0468132B6D081500B6A972 /* AWSPinpoint.xcframework in Embed Frameworks */,
+				8C0468092B6D080D00B6A972 /* AWSCognitoIdentityProvider.xcframework in Embed Frameworks */,
+				8C04680D2B6D081000B6A972 /* AWSCore.xcframework in Embed Frameworks */,
+				8C0468062B6D080C00B6A972 /* AWSAuthCore.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,17 +77,15 @@
 		4912A9B443546C1BE825B685 /* Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		53A82348EDCF9196A09C9133 /* Pods_ExpofpExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpofpExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ExpofpExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8C0467DA2B6CF4E800B6A972 /* AWSAuthCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSAuthCore.framework; sourceTree = "<group>"; };
-		8C0467DC2B6CF4F200B6A972 /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognitoIdentityProvider.framework; sourceTree = "<group>"; };
-		8C0467DE2B6CF4F700B6A972 /* AWSCognitoIdentityProviderASF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognitoIdentityProviderASF.framework; sourceTree = "<group>"; };
-		8C0467E02B6CF4FD00B6A972 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
-		8C0467E22B6CF50200B6A972 /* AWSKinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSKinesis.framework; sourceTree = "<group>"; };
-		8C0467E42B6CF50700B6A972 /* AWSMobileClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileClient.framework; sourceTree = "<group>"; };
-		8C0467E62B6CF50C00B6A972 /* AWSPinpoint.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSPinpoint.framework; sourceTree = "<group>"; };
-		8CCAE46E2B6B06F80036C662 /* AWSMobileClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
+		8C0467F82B6D080600B6A972 /* AWSPinpoint.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AWSPinpoint.xcframework; sourceTree = "<group>"; };
+		8C0467F92B6D080600B6A972 /* AWSCognitoIdentityProviderASF.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AWSCognitoIdentityProviderASF.xcframework; sourceTree = "<group>"; };
+		8C0467FA2B6D080700B6A972 /* AWSKinesis.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AWSKinesis.xcframework; sourceTree = "<group>"; };
+		8C0467FB2B6D080700B6A972 /* AWSCognitoIdentityProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AWSCognitoIdentityProvider.xcframework; sourceTree = "<group>"; };
+		8C0467FC2B6D080800B6A972 /* AWSCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AWSCore.xcframework; sourceTree = "<group>"; };
+		8C0467FD2B6D080900B6A972 /* AWSAuthCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AWSAuthCore.xcframework; sourceTree = "<group>"; };
+		8C0468142B6D0AA000B6A972 /* AWSMobileClientXCF.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AWSMobileClientXCF.xcframework; sourceTree = "<group>"; };
 		8CF26BF52B6AE2460041407A /* ExpofpExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExpofpExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		8CF26BF62B6AE2470041407A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F06B5EDA1811AA44321889BC /* Pods_ExpofpExample_ExpofpExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpofpExample_ExpofpExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,14 +102,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C0467ED2B6CF51700B6A972 /* AWSCognitoIdentityProviderASF.framework in Frameworks */,
-				8C0467F12B6CF51A00B6A972 /* AWSKinesis.framework in Frameworks */,
-				8C0467EF2B6CF51900B6A972 /* AWSCore.framework in Frameworks */,
-				8C0467EB2B6CF51600B6A972 /* AWSCognitoIdentityProvider.framework in Frameworks */,
-				8C0467F52B6CF51D00B6A972 /* AWSPinpoint.framework in Frameworks */,
-				8C0467E82B6CF51400B6A972 /* AWSAuthCore.framework in Frameworks */,
-				8C0467F32B6CF51B00B6A972 /* AWSMobileClient.framework in Frameworks */,
-				6C90E479ABF89AC7B324A6BE /* Pods_ExpofpExample.framework in Frameworks */,
+				8C6DB4452B6D22E800D627F2 /* Pods_ExpofpExample.framework in Frameworks */,
+				8C0468162B6D0AA900B6A972 /* AWSMobileClientXCF.xcframework in Frameworks */,
+				8C0468082B6D080D00B6A972 /* AWSCognitoIdentityProvider.xcframework in Frameworks */,
+				8C0468122B6D081400B6A972 /* AWSPinpoint.xcframework in Frameworks */,
+				8C0468052B6D080C00B6A972 /* AWSAuthCore.xcframework in Frameworks */,
+				8C04680A2B6D080F00B6A972 /* AWSCognitoIdentityProviderASF.xcframework in Frameworks */,
+				8C04680C2B6D081000B6A972 /* AWSCore.xcframework in Frameworks */,
+				8C04680E2B6D081100B6A972 /* AWSKinesis.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +142,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				8CF26BF62B6AE2470041407A /* File.swift */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
-				8CCAE46E2B6B06F80036C662 /* AWSMobileClient.swift */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				8CF26BF52B6AE2460041407A /* ExpofpExample-Bridging-Header.h */,
 			);
@@ -155,14 +151,13 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8C0467E02B6CF4FD00B6A972 /* AWSCore.framework */,
-				8C0467DA2B6CF4E800B6A972 /* AWSAuthCore.framework */,
-				8C0467E62B6CF50C00B6A972 /* AWSPinpoint.framework */,
-				8C0467DC2B6CF4F200B6A972 /* AWSCognitoIdentityProvider.framework */,
-				8C0467DE2B6CF4F700B6A972 /* AWSCognitoIdentityProviderASF.framework */,
-				8C0467E42B6CF50700B6A972 /* AWSMobileClient.framework */,
-				8C0467E22B6CF50200B6A972 /* AWSKinesis.framework */,
-				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				8C0467FD2B6D080900B6A972 /* AWSAuthCore.xcframework */,
+				8C0468142B6D0AA000B6A972 /* AWSMobileClientXCF.xcframework */,
+				8C0467FB2B6D080700B6A972 /* AWSCognitoIdentityProvider.xcframework */,
+				8C0467F92B6D080600B6A972 /* AWSCognitoIdentityProviderASF.xcframework */,
+				8C0467FC2B6D080800B6A972 /* AWSCore.xcframework */,
+				8C0467FA2B6D080700B6A972 /* AWSKinesis.xcframework */,
+				8C0467F82B6D080600B6A972 /* AWSPinpoint.xcframework */,
 				53A82348EDCF9196A09C9133 /* Pods_ExpofpExample.framework */,
 				F06B5EDA1811AA44321889BC /* Pods_ExpofpExample_ExpofpExampleTests.framework */,
 			);
@@ -246,7 +241,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				F4DF5925C5AE522F8EAD6CC8 /* [CP] Embed Pods Frameworks */,
 				004714687A72862CDD60AC6E /* [CP] Copy Pods Resources */,
-				8C0467EA2B6CF51500B6A972 /* Embed Frameworks */,
+				8C0468072B6D080C00B6A972 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -458,7 +453,6 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				8CF26BF72B6AE2470041407A /* File.swift in Sources */,
-				8CCAE46F2B6B06F80036C662 /* AWSMobileClient.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
