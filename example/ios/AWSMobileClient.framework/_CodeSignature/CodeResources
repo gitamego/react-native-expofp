@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/AWSMobileClient-Swift.h</key>
 		<data>
-		fFqCvvRv36JsRdmZ+xKKpCBeo2I=
+		seQT47iRZge+nGgEfFJ5ZTTpXU4=
 		</data>
 		<key>Headers/AWSMobileClient-umbrella.h</key>
 		<data>
@@ -38,23 +38,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		aAs3fa/h+YZh+VmoCDVUcBSLtq0=
+		03pK1aYsYMenLLSIHYW4vgKFDjU=
 		</data>
-		<key>Modules/AWSMobileClient.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
+		<key>Modules/AWSMobileClient.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		/tCJDN+PfnsV6qsAMAaCowtGmZI=
+		sKGBAwjyfWewPz5WIjddRbIVzHI=
 		</data>
-		<key>Modules/AWSMobileClient.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<key>Modules/AWSMobileClient.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
 		FSPnLbho3G+LL9smI3XgVOqBIQ4=
 		</data>
-		<key>Modules/AWSMobileClient.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<key>Modules/AWSMobileClient.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		4iLWSUTOVCmNb/IZtd2jwpSRNqU=
+		mT2V+PIwSMcrk4ga8BSxuX48vg8=
 		</data>
-		<key>Modules/AWSMobileClient.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<key>Modules/AWSMobileClient.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		W0ZTcRTalOIGNQNBs4/XvyXLegI=
+		LpIxvacxudiYhb8LK+1jpEYFcRk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -111,11 +111,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fFqCvvRv36JsRdmZ+xKKpCBeo2I=
+			seQT47iRZge+nGgEfFJ5ZTTpXU4=
 			</data>
 			<key>hash2</key>
 			<data>
-			NFr61gmryKy2UOeg4ow0fDs/uPw8PJU99FyEnwVmSVg=
+			JGJS8//TCi7CnGbKu1tJ3swX9BVNeTSWb3VnTCSbwsk=
 			</data>
 		</dict>
 		<key>Headers/AWSMobileClient-umbrella.h</key>
@@ -151,18 +151,18 @@
 			oP8ySb8Kq8yGA8EXjK83OKcgJkVVw03hk0fqO0/ATdk=
 			</data>
 		</dict>
-		<key>Modules/AWSMobileClient.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
+		<key>Modules/AWSMobileClient.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/tCJDN+PfnsV6qsAMAaCowtGmZI=
+			sKGBAwjyfWewPz5WIjddRbIVzHI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zj5s19+aWswPI49/l38tmCQJk56a0TmaLGdh6EQ2Q4A=
+			zBwbvxQWry5jcwYZeLfJS9QV03N0YWy21B2J4qYVuGI=
 			</data>
 		</dict>
-		<key>Modules/AWSMobileClient.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<key>Modules/AWSMobileClient.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -173,26 +173,26 @@
 			KnRdWE4y6t4QM5zi5JDptPdHFgJy1Tku+7GLkZS2aNM=
 			</data>
 		</dict>
-		<key>Modules/AWSMobileClient.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<key>Modules/AWSMobileClient.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4iLWSUTOVCmNb/IZtd2jwpSRNqU=
+			mT2V+PIwSMcrk4ga8BSxuX48vg8=
 			</data>
 			<key>hash2</key>
 			<data>
-			AMktWe8e8ZkTaI7AyNjZ0k4SEiLOhC0cVhrqZ19IEhQ=
+			M1A+AmsixCozXtBKJeEiPSpSyZtzskJFJiy0b/9RX0s=
 			</data>
 		</dict>
-		<key>Modules/AWSMobileClient.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<key>Modules/AWSMobileClient.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			W0ZTcRTalOIGNQNBs4/XvyXLegI=
+			LpIxvacxudiYhb8LK+1jpEYFcRk=
 			</data>
 			<key>hash2</key>
 			<data>
-			7WqEtBZCnk7Jy5YhyqRbDK2QGbEtiEWGm1Ylj3C6jkg=
+			a8YZIkGFVOqYcPPqezycR8tH3JdgSjcKhWG1n+utBjU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

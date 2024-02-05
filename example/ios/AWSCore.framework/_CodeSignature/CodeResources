@@ -242,7 +242,7 @@
 		</data>
 		<key>Headers/AWSServiceEnum.h</key>
 		<data>
-		8qMuSyYLU6yK4EfOW0TNl7dmTeM=
+		LD2jV9xB/1HlH02Qo+DaOs3zTq0=
 		</data>
 		<key>Headers/AWSSignature.h</key>
 		<data>
@@ -318,7 +318,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		sWk21/kZrCEdNejGWP1CAFJNuSY=
+		nXDgXLb+2Q2xYB3ba6Fp4olJlpI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1024,11 +1024,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8qMuSyYLU6yK4EfOW0TNl7dmTeM=
+			LD2jV9xB/1HlH02Qo+DaOs3zTq0=
 			</data>
 			<key>hash2</key>
 			<data>
-			shr5Yvxk9EstnZ7Lm64GY/Gf/H3iQjCU9Pydj9o+G6I=
+			MeJG++N5FxH94wxm7bfGx5cYe8+5rOazPcGVhSIczfQ=
 			</data>
 		</dict>
 		<key>Headers/AWSSignature.h</key>

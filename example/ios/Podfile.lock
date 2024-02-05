@@ -1,41 +1,43 @@
 PODS:
-  - AWSAuthCore (2.28.2):
-    - AWSCore (= 2.28.2)
-  - AWSCognitoIdentityProvider (2.28.2):
-    - AWSCognitoIdentityProviderASF (= 2.28.2)
-    - AWSCore (= 2.28.2)
-  - AWSCognitoIdentityProviderASF (2.28.2):
-    - AWSCore (= 2.28.2)
-  - AWSCore (2.28.2)
-  - AWSKinesis (2.28.2):
-    - AWSCore (= 2.28.2)
-  - AWSMobileClient (2.28.2):
-    - AWSAuthCore (= 2.28.2)
-    - AWSCognitoIdentityProvider (= 2.28.2)
-    - AWSCognitoIdentityProviderASF (= 2.28.2)
-    - AWSCore (= 2.28.2)
-  - AWSPinpoint (2.28.2):
-    - AWSCore (= 2.28.2)
+  - AWSAuthCore (2.28.5):
+    - AWSCore (= 2.28.5)
+  - AWSCognitoIdentityProvider (2.28.5):
+    - AWSCognitoIdentityProviderASF (= 2.28.5)
+    - AWSCore (= 2.28.5)
+  - AWSCognitoIdentityProviderASF (2.28.5):
+    - AWSCore (= 2.28.5)
+  - AWSCore (2.28.5)
+  - AWSKinesis (2.28.5):
+    - AWSCore (= 2.28.5)
+  - AWSMobileClient (2.28.5):
+    - AWSAuthCore (= 2.28.5)
+    - AWSCognitoIdentityProvider (= 2.28.5)
+    - AWSCognitoIdentityProviderASF (= 2.28.5)
+    - AWSCore (= 2.28.5)
+  - AWSPinpoint (2.28.5):
+    - AWSCore (= 2.28.5)
   - boost (1.83.0)
-  - CrowdConnectedCore (1.4.0):
+  - CrowdConnectedCore (1.6.1):
+    - AWSKinesis
     - AWSMobileClient
     - AWSPinpoint
     - CrowdConnectedShared
-  - CrowdConnectedGeo (1.4.0):
+  - CrowdConnectedGeo (1.6.1):
     - CrowdConnectedShared
-  - CrowdConnectedIPS (1.4.0):
+  - CrowdConnectedIPS (1.6.1):
     - CrowdConnectedShared
   - CrowdConnectedShared (1.6.1)
   - DoubleConversion (1.1.6)
-  - ExpoFpCommon (4.0.2)
-  - ExpoFpCrowdConnected (4.0.2):
-    - AWSKinesis (= 2.28.2)
-    - CrowdConnectedCore (= 1.4.0)
-    - CrowdConnectedGeo (= 1.4.0)
-    - CrowdConnectedIPS (= 1.4.0)
-    - ExpoFpCommon (= 4.0.2)
-  - ExpoFpFplan (4.0.2):
-    - ExpoFpCommon (= 4.0.2)
+  - ExpoFpCommon (4.2.18)
+  - ExpoFpCrowdConnected (4.2.18):
+    - AWSKinesis (~> 2.28.2)
+    - CrowdConnectedCore (~> 1.6.0)
+    - CrowdConnectedGeo (~> 1.6.0)
+    - CrowdConnectedIPS (~> 1.6.0)
+    - ExpoFpCommon (= 4.2.18)
+  - ExpoFpFplan (4.2.18):
+    - ExpoFpCommon (= 4.2.18)
+    - ZIPFoundation (~> 0.9.16)
   - FBLazyVector (0.73.2)
   - FBReactNativeSpec (0.73.2):
     - RCT-Folly (= 2022.05.16.00)
@@ -922,7 +924,8 @@ PODS:
     - glog
     - React-debug
   - react-native-expofp (0.1.0):
-    - ExpoFpFplan (= 4.0.2)
+    - ExpoFpCrowdConnected (= 4.2.18)
+    - ExpoFpFplan (= 4.2.18)
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
@@ -1095,16 +1098,11 @@ PODS:
     - React-perflogger (= 0.73.2)
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
+  - ZIPFoundation (0.9.16)
 
 DEPENDENCIES:
-  - AWSAuthCore
-  - AWSCognitoIdentityProvider
-  - AWSCognitoIdentityProviderASF
-  - AWSCore
-  - AWSMobileClient
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
-  - ExpoFpCrowdConnected (= 4.0.2)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
@@ -1175,6 +1173,7 @@ SPEC REPOS:
     - fmt
     - libevent
     - SocketRocket
+    - ZIPFoundation
 
 EXTERNAL SOURCES:
   boost:
@@ -1278,22 +1277,22 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  AWSAuthCore: 09b10773154596717583a7ea4e8cf80f7f014d3c
-  AWSCognitoIdentityProvider: fd6ce8429b5cbb22794359424f8bcdf1956aa7c1
-  AWSCognitoIdentityProviderASF: ae23b2c36af3d59622b23d79cea88707662ada6e
-  AWSCore: 1e0cdd5ac2330d02ce019673065791d2b6596293
-  AWSKinesis: 5cd8700ee9e33fd439f8e1850f29fe93092c9ccb
-  AWSMobileClient: 2fed98a97ee48bf8401bcb1649d32829d5f98962
-  AWSPinpoint: 3a44c5993ecc8466d2d9a1686be0da201ba72604
+  AWSAuthCore: e728d73a2b4eed9e826506a1f0fcc58171537267
+  AWSCognitoIdentityProvider: 261fac98d461e9e398bf3c1e18c3cd90578b33ca
+  AWSCognitoIdentityProviderASF: 8e35d6414d9ee2443e9167414ef5e839a58e1e72
+  AWSCore: 4bad3f0eb17393b4926a9491e32b835991c56382
+  AWSKinesis: 098e422ef20c72710c173c3407a5cc82d7624ecd
+  AWSMobileClient: c898658a4d15e64e07d39c7dc6354fd3ea3055a9
+  AWSPinpoint: 2c41ce0ff69c6e5621c330c62d504807e4ce534a
   boost: d3f49c53809116a5d38da093a8aa78bf551aed09
-  CrowdConnectedCore: 525dee267e5020dd389062355423a53dc0e6bd2a
-  CrowdConnectedGeo: cf4a10afda7347861c28ad30e71f9d4e79f82875
-  CrowdConnectedIPS: 83ea186595aefb164ec6f4f76b6c24db359770ee
+  CrowdConnectedCore: 5a44578cdcaced47f2b8384b95310fbd28d73d19
+  CrowdConnectedGeo: c86bf86745e5e1c67c8b0d9d8b51629b03082c58
+  CrowdConnectedIPS: 8f150033148767e0fc5989d0e588e8db7b78bc45
   CrowdConnectedShared: b4847336bd86fcabd886dcfd3b2a13b40062a4e7
   DoubleConversion: fea03f2699887d960129cc54bba7e52542b6f953
-  ExpoFpCommon: 35d3d08ee7a00b383aa8dff99a0f7e05b9aa1581
-  ExpoFpCrowdConnected: d8133b9ca68e8623295a005edee67e1952ad443f
-  ExpoFpFplan: 3c1c854545ddf4cc1c328d3cd2606b6bb86eda8a
+  ExpoFpCommon: 8a9a98bce59cb41daf50bad976eea3ce482d15b1
+  ExpoFpCrowdConnected: b9c42b07412e8019ddfb9a740d1729734b9224c6
+  ExpoFpFplan: e3cec41f3da3493332d456b87f76f84c81d0ff2e
   FBLazyVector: fbc4957d9aa695250b55d879c1d86f79d7e69ab4
   FBReactNativeSpec: 86de768f89901ef6ed3207cd686362189d64ac88
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
@@ -1321,7 +1320,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 03644c063fc3621c9a4e8bf263a8150909129618
   React-logger: 66b168e2b2bee57bd8ce9e69f739d805732a5570
   React-Mapbuffer: f40e0ea0df8161075390332dfcb0496442c09371
-  react-native-expofp: d9368b3bd6d5be1f37446649cc9005156ba4c828
+  react-native-expofp: 14f997f08d4aeb459b8912d352dbfcd30d19f5b8
   React-nativeconfig: 4dda3cbbdd1c4ce38450bb10b34b3e54120e4a91
   React-NativeModulesApple: d25a530c61e94fb317a0124b1cde1c459e4a47d3
   React-perflogger: 29efe63b7ef5fbaaa50ef6eaa92482f98a24b97e
@@ -1344,7 +1343,8 @@ SPEC CHECKSUMS:
   ReactCommon: d4860bcbe85d89bb261ba28948f027325bb577dc
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 13c8ef87792450193e117976337b8527b49e8c03
+  ZIPFoundation: d170fa8e270b2a32bef9dcdcabff5b8f1a5deced
 
-PODFILE CHECKSUM: 9d86c957dbe3e534dfc734f5fdd0b4c6450a0511
+PODFILE CHECKSUM: 7b572fa60840ee8db7d79a8c063d4f60d0498a1b
 
 COCOAPODS: 1.14.3

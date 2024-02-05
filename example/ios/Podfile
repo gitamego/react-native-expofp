@@ -33,12 +33,12 @@ target 'ExpofpExample' do
   #use_modular_headers!
   config = use_native_modules!
   
-  pod 'ExpoFpCrowdConnected', '4.0.2'
-  pod "AWSMobileClient"
-  pod "AWSAuthCore"
-  pod "AWSCognitoIdentityProvider"
-  pod "AWSCore"
-  pod "AWSCognitoIdentityProviderASF"
+  #pod 'ExpoFpCrowdConnected', '4.0.2'
+  #pod "AWSMobileClient"
+  #pod "AWSAuthCore"
+  #pod "AWSCognitoIdentityProvider"
+  #pod "AWSCore"
+  #pod "AWSCognitoIdentityProviderASF"
   
   
   #pod "AWSMobileClient", :modular_headers => true

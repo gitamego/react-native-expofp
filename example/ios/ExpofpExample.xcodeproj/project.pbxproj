@@ -11,25 +11,25 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		6C90E479ABF89AC7B324A6BE /* Pods_ExpofpExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A82348EDCF9196A09C9133 /* Pods_ExpofpExample.framework */; };
+		1E0AD4FB02FBF2A45D048224 /* Pods_ExpofpExample_ExpofpExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0B1C17BA557B118148678C /* Pods_ExpofpExample_ExpofpExampleTests.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8C0467E82B6CF51400B6A972 /* AWSAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DA2B6CF4E800B6A972 /* AWSAuthCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467E92B6CF51400B6A972 /* AWSAuthCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DA2B6CF4E800B6A972 /* AWSAuthCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467EB2B6CF51600B6A972 /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DC2B6CF4F200B6A972 /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467EC2B6CF51600B6A972 /* AWSCognitoIdentityProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DC2B6CF4F200B6A972 /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467ED2B6CF51700B6A972 /* AWSCognitoIdentityProviderASF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DE2B6CF4F700B6A972 /* AWSCognitoIdentityProviderASF.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467EE2B6CF51700B6A972 /* AWSCognitoIdentityProviderASF.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467DE2B6CF4F700B6A972 /* AWSCognitoIdentityProviderASF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467EF2B6CF51900B6A972 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E02B6CF4FD00B6A972 /* AWSCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467F02B6CF51900B6A972 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E02B6CF4FD00B6A972 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467F12B6CF51A00B6A972 /* AWSKinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E22B6CF50200B6A972 /* AWSKinesis.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467F22B6CF51A00B6A972 /* AWSKinesis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E22B6CF50200B6A972 /* AWSKinesis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467F32B6CF51B00B6A972 /* AWSMobileClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E42B6CF50700B6A972 /* AWSMobileClient.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467F42B6CF51B00B6A972 /* AWSMobileClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E42B6CF50700B6A972 /* AWSMobileClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8C0467F52B6CF51D00B6A972 /* AWSPinpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E62B6CF50C00B6A972 /* AWSPinpoint.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		8C0467F62B6CF51D00B6A972 /* AWSPinpoint.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0467E62B6CF50C00B6A972 /* AWSPinpoint.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8CCAE46F2B6B06F80036C662 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCAE46E2B6B06F80036C662 /* AWSMobileClient.swift */; };
-		8CF26BF72B6AE2470041407A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF26BF62B6AE2470041407A /* File.swift */; };
-		9DFA68C449A4D2E7984D58DD /* Pods_ExpofpExample_ExpofpExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06B5EDA1811AA44321889BC /* Pods_ExpofpExample_ExpofpExampleTests.framework */; };
+		8CC10F8D2B6D4E7D0036384A /* AWSPinpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F8B2B6D4E6F0036384A /* AWSPinpoint.framework */; };
+		8CC10F8E2B6D4E7D0036384A /* AWSPinpoint.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F8B2B6D4E6F0036384A /* AWSPinpoint.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CC10F8F2B6D4E7E0036384A /* AWSMobileClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F892B6D4E6B0036384A /* AWSMobileClient.framework */; };
+		8CC10F902B6D4E7E0036384A /* AWSMobileClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F892B6D4E6B0036384A /* AWSMobileClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CC10F912B6D4E7F0036384A /* AWSKinesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F872B6D4E670036384A /* AWSKinesis.framework */; };
+		8CC10F922B6D4E7F0036384A /* AWSKinesis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F872B6D4E670036384A /* AWSKinesis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CC10F932B6D4E800036384A /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F852B6D4E620036384A /* AWSCore.framework */; };
+		8CC10F942B6D4E800036384A /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F852B6D4E620036384A /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CC10F952B6D4E810036384A /* AWSCognitoIdentityProviderASF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F832B6D4E5E0036384A /* AWSCognitoIdentityProviderASF.framework */; };
+		8CC10F962B6D4E810036384A /* AWSCognitoIdentityProviderASF.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F832B6D4E5E0036384A /* AWSCognitoIdentityProviderASF.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CC10F972B6D4E820036384A /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F812B6D4E580036384A /* AWSCognitoIdentityProvider.framework */; };
+		8CC10F982B6D4E820036384A /* AWSCognitoIdentityProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F812B6D4E580036384A /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CC10F992B6D4E830036384A /* AWSAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F7F2B6D4E530036384A /* AWSAuthCore.framework */; };
+		8CC10F9A2B6D4E830036384A /* AWSAuthCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC10F7F2B6D4E530036384A /* AWSAuthCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CCA80552B6D48A6004A7ABD /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCA80532B6D4897004A7ABD /* ZIPFoundation.framework */; };
+		8CCA80562B6D48A6004A7ABD /* ZIPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCA80532B6D4897004A7ABD /* ZIPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C419E5CA395325845B87328A /* Pods_ExpofpExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F6E6A217759F6C0949CEE8 /* Pods_ExpofpExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,19 +43,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8C0467EA2B6CF51500B6A972 /* Embed Frameworks */ = {
+		8CCA80462B6D46E7004A7ABD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8C0467EE2B6CF51700B6A972 /* AWSCognitoIdentityProviderASF.framework in Embed Frameworks */,
-				8C0467F62B6CF51D00B6A972 /* AWSPinpoint.framework in Embed Frameworks */,
-				8C0467F02B6CF51900B6A972 /* AWSCore.framework in Embed Frameworks */,
-				8C0467E92B6CF51400B6A972 /* AWSAuthCore.framework in Embed Frameworks */,
-				8C0467F42B6CF51B00B6A972 /* AWSMobileClient.framework in Embed Frameworks */,
-				8C0467F22B6CF51A00B6A972 /* AWSKinesis.framework in Embed Frameworks */,
-				8C0467EC2B6CF51600B6A972 /* AWSCognitoIdentityProvider.framework in Embed Frameworks */,
+				8CC10F962B6D4E810036384A /* AWSCognitoIdentityProviderASF.framework in Embed Frameworks */,
+				8CC10F902B6D4E7E0036384A /* AWSMobileClient.framework in Embed Frameworks */,
+				8CC10F942B6D4E800036384A /* AWSCore.framework in Embed Frameworks */,
+				8CC10F982B6D4E820036384A /* AWSCognitoIdentityProvider.framework in Embed Frameworks */,
+				8CC10F922B6D4E7F0036384A /* AWSKinesis.framework in Embed Frameworks */,
+				8CCA80562B6D48A6004A7ABD /* ZIPFoundation.framework in Embed Frameworks */,
+				8CC10F8E2B6D4E7D0036384A /* AWSPinpoint.framework in Embed Frameworks */,
+				8CC10F9A2B6D4E830036384A /* AWSAuthCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,30 +67,28 @@
 		00E356EE1AD99517003FC87E /* ExpofpExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpofpExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ExpofpExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpofpExampleTests.m; sourceTree = "<group>"; };
-		091C35117A67EA0C519C8D06 /* Pods-ExpofpExample-ExpofpExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpofpExample-ExpofpExampleTests.release.xcconfig"; path = "Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		09626F2C04BB01AAF9883C3E /* Pods-ExpofpExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpofpExample.release.xcconfig"; path = "Target Support Files/Pods-ExpofpExample/Pods-ExpofpExample.release.xcconfig"; sourceTree = "<group>"; };
-		0AA3F1E1D8FA314CF9061EB6 /* Pods-ExpofpExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpofpExample.debug.xcconfig"; path = "Target Support Files/Pods-ExpofpExample/Pods-ExpofpExample.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ExpofpExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpofpExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ExpofpExample/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ExpofpExample/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ExpofpExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ExpofpExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ExpofpExample/main.m; sourceTree = "<group>"; };
-		4912A9B443546C1BE825B685 /* Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		53A82348EDCF9196A09C9133 /* Pods_ExpofpExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpofpExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB13FC5A3B74F04B40DB5AE /* Pods-ExpofpExample-ExpofpExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpofpExample-ExpofpExampleTests.release.xcconfig"; path = "Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		74F6E6A217759F6C0949CEE8 /* Pods_ExpofpExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpofpExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75E91E3746DCD6A3F2207CE4 /* Pods-ExpofpExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpofpExample.release.xcconfig"; path = "Target Support Files/Pods-ExpofpExample/Pods-ExpofpExample.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ExpofpExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8C0467DA2B6CF4E800B6A972 /* AWSAuthCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSAuthCore.framework; sourceTree = "<group>"; };
-		8C0467DC2B6CF4F200B6A972 /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognitoIdentityProvider.framework; sourceTree = "<group>"; };
-		8C0467DE2B6CF4F700B6A972 /* AWSCognitoIdentityProviderASF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognitoIdentityProviderASF.framework; sourceTree = "<group>"; };
-		8C0467E02B6CF4FD00B6A972 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
-		8C0467E22B6CF50200B6A972 /* AWSKinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSKinesis.framework; sourceTree = "<group>"; };
-		8C0467E42B6CF50700B6A972 /* AWSMobileClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileClient.framework; sourceTree = "<group>"; };
-		8C0467E62B6CF50C00B6A972 /* AWSPinpoint.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSPinpoint.framework; sourceTree = "<group>"; };
-		8CCAE46E2B6B06F80036C662 /* AWSMobileClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
-		8CF26BF52B6AE2460041407A /* ExpofpExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExpofpExample-Bridging-Header.h"; sourceTree = "<group>"; };
-		8CF26BF62B6AE2470041407A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		8CC10F7F2B6D4E530036384A /* AWSAuthCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSAuthCore.framework; sourceTree = "<group>"; };
+		8CC10F812B6D4E580036384A /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognitoIdentityProvider.framework; sourceTree = "<group>"; };
+		8CC10F832B6D4E5E0036384A /* AWSCognitoIdentityProviderASF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognitoIdentityProviderASF.framework; sourceTree = "<group>"; };
+		8CC10F852B6D4E620036384A /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
+		8CC10F872B6D4E670036384A /* AWSKinesis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSKinesis.framework; sourceTree = "<group>"; };
+		8CC10F892B6D4E6B0036384A /* AWSMobileClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileClient.framework; sourceTree = "<group>"; };
+		8CC10F8B2B6D4E6F0036384A /* AWSPinpoint.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSPinpoint.framework; sourceTree = "<group>"; };
+		8CCA80532B6D4897004A7ABD /* ZIPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZIPFoundation.framework; sourceTree = "<group>"; };
+		8D2F0F8E3744998B7BC4C920 /* Pods-ExpofpExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpofpExample.debug.xcconfig"; path = "Target Support Files/Pods-ExpofpExample/Pods-ExpofpExample.debug.xcconfig"; sourceTree = "<group>"; };
+		CE0B1C17BA557B118148678C /* Pods_ExpofpExample_ExpofpExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpofpExample_ExpofpExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E820C237A53973E380DE5FE9 /* Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F06B5EDA1811AA44321889BC /* Pods_ExpofpExample_ExpofpExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpofpExample_ExpofpExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFA68C449A4D2E7984D58DD /* Pods_ExpofpExample_ExpofpExampleTests.framework in Frameworks */,
+				1E0AD4FB02FBF2A45D048224 /* Pods_ExpofpExample_ExpofpExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,14 +104,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C0467ED2B6CF51700B6A972 /* AWSCognitoIdentityProviderASF.framework in Frameworks */,
-				8C0467F12B6CF51A00B6A972 /* AWSKinesis.framework in Frameworks */,
-				8C0467EF2B6CF51900B6A972 /* AWSCore.framework in Frameworks */,
-				8C0467EB2B6CF51600B6A972 /* AWSCognitoIdentityProvider.framework in Frameworks */,
-				8C0467F52B6CF51D00B6A972 /* AWSPinpoint.framework in Frameworks */,
-				8C0467E82B6CF51400B6A972 /* AWSAuthCore.framework in Frameworks */,
-				8C0467F32B6CF51B00B6A972 /* AWSMobileClient.framework in Frameworks */,
-				6C90E479ABF89AC7B324A6BE /* Pods_ExpofpExample.framework in Frameworks */,
+				8CC10F992B6D4E830036384A /* AWSAuthCore.framework in Frameworks */,
+				8CCA80552B6D48A6004A7ABD /* ZIPFoundation.framework in Frameworks */,
+				8CC10F912B6D4E7F0036384A /* AWSKinesis.framework in Frameworks */,
+				8CC10F8D2B6D4E7D0036384A /* AWSPinpoint.framework in Frameworks */,
+				C419E5CA395325845B87328A /* Pods_ExpofpExample.framework in Frameworks */,
+				8CC10F8F2B6D4E7E0036384A /* AWSMobileClient.framework in Frameworks */,
+				8CC10F952B6D4E810036384A /* AWSCognitoIdentityProviderASF.framework in Frameworks */,
+				8CC10F972B6D4E820036384A /* AWSCognitoIdentityProvider.framework in Frameworks */,
+				8CC10F932B6D4E800036384A /* AWSCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,11 +143,8 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				8CF26BF62B6AE2470041407A /* File.swift */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
-				8CCAE46E2B6B06F80036C662 /* AWSMobileClient.swift */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				8CF26BF52B6AE2460041407A /* ExpofpExample-Bridging-Header.h */,
 			);
 			name = ExpofpExample;
 			sourceTree = "<group>";
@@ -155,16 +152,17 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8C0467E02B6CF4FD00B6A972 /* AWSCore.framework */,
-				8C0467DA2B6CF4E800B6A972 /* AWSAuthCore.framework */,
-				8C0467E62B6CF50C00B6A972 /* AWSPinpoint.framework */,
-				8C0467DC2B6CF4F200B6A972 /* AWSCognitoIdentityProvider.framework */,
-				8C0467DE2B6CF4F700B6A972 /* AWSCognitoIdentityProviderASF.framework */,
-				8C0467E42B6CF50700B6A972 /* AWSMobileClient.framework */,
-				8C0467E22B6CF50200B6A972 /* AWSKinesis.framework */,
+				8CC10F7F2B6D4E530036384A /* AWSAuthCore.framework */,
+				8CC10F852B6D4E620036384A /* AWSCore.framework */,
+				8CC10F892B6D4E6B0036384A /* AWSMobileClient.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				53A82348EDCF9196A09C9133 /* Pods_ExpofpExample.framework */,
-				F06B5EDA1811AA44321889BC /* Pods_ExpofpExample_ExpofpExampleTests.framework */,
+				8CC10F872B6D4E670036384A /* AWSKinesis.framework */,
+				8CC10F8B2B6D4E6F0036384A /* AWSPinpoint.framework */,
+				8CCA80532B6D4897004A7ABD /* ZIPFoundation.framework */,
+				8CC10F832B6D4E5E0036384A /* AWSCognitoIdentityProviderASF.framework */,
+				8CC10F812B6D4E580036384A /* AWSCognitoIdentityProvider.framework */,
+				74F6E6A217759F6C0949CEE8 /* Pods_ExpofpExample.framework */,
+				CE0B1C17BA557B118148678C /* Pods_ExpofpExample_ExpofpExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,10 +201,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0AA3F1E1D8FA314CF9061EB6 /* Pods-ExpofpExample.debug.xcconfig */,
-				09626F2C04BB01AAF9883C3E /* Pods-ExpofpExample.release.xcconfig */,
-				4912A9B443546C1BE825B685 /* Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig */,
-				091C35117A67EA0C519C8D06 /* Pods-ExpofpExample-ExpofpExampleTests.release.xcconfig */,
+				8D2F0F8E3744998B7BC4C920 /* Pods-ExpofpExample.debug.xcconfig */,
+				75E91E3746DCD6A3F2207CE4 /* Pods-ExpofpExample.release.xcconfig */,
+				E820C237A53973E380DE5FE9 /* Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig */,
+				6DB13FC5A3B74F04B40DB5AE /* Pods-ExpofpExample-ExpofpExampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -218,12 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ExpofpExampleTests" */;
 			buildPhases = (
-				A215071D9D192A3B49CD5D82 /* [CP] Check Pods Manifest.lock */,
+				48129C168862D7EB090012E6 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				83ECDC4D4904CCC79F8F6CB3 /* [CP] Embed Pods Frameworks */,
-				342B5C98784568D955A94204 /* [CP] Copy Pods Resources */,
+				43B00E0A30D046F80AC7327B /* [CP] Embed Pods Frameworks */,
+				4A11914C886055D74D8E7D92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,14 +237,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ExpofpExample" */;
 			buildPhases = (
-				06B958055CDC2263B0BF6E79 /* [CP] Check Pods Manifest.lock */,
+				730F74579DFB7625F2599B87 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				F4DF5925C5AE522F8EAD6CC8 /* [CP] Embed Pods Frameworks */,
-				004714687A72862CDD60AC6E /* [CP] Copy Pods Resources */,
-				8C0467EA2B6CF51500B6A972 /* Embed Frameworks */,
+				8CCA80462B6D46E7004A7ABD /* Embed Frameworks */,
+				E304D67B59A5254C5630EA3B /* [CP] Embed Pods Frameworks */,
+				7C8160771613BD0C2492B784 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -313,23 +311,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		004714687A72862CDD60AC6E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample/Pods-ExpofpExample-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample/Pods-ExpofpExample-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample/Pods-ExpofpExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,46 +327,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		06B958055CDC2263B0BF6E79 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ExpofpExample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		342B5C98784568D955A94204 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		83ECDC4D4904CCC79F8F6CB3 /* [CP] Embed Pods Frameworks */ = {
+		43B00E0A30D046F80AC7327B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -402,7 +344,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A215071D9D192A3B49CD5D82 /* [CP] Check Pods Manifest.lock */ = {
+		48129C168862D7EB090012E6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -424,7 +366,63 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F4DF5925C5AE522F8EAD6CC8 /* [CP] Embed Pods Frameworks */ = {
+		4A11914C886055D74D8E7D92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample-ExpofpExampleTests/Pods-ExpofpExample-ExpofpExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		730F74579DFB7625F2599B87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExpofpExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C8160771613BD0C2492B784 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample/Pods-ExpofpExample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample/Pods-ExpofpExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExpofpExample/Pods-ExpofpExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E304D67B59A5254C5630EA3B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -457,8 +455,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
-				8CF26BF72B6AE2470041407A /* File.swift in Sources */,
-				8CCAE46F2B6B06F80036C662 /* AWSMobileClient.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,9 +472,8 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4912A9B443546C1BE825B685 /* Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig */;
+			baseConfigurationReference = E820C237A53973E380DE5FE9 /* Pods-ExpofpExample-ExpofpExampleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -504,9 +499,8 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 091C35117A67EA0C519C8D06 /* Pods-ExpofpExample-ExpofpExampleTests.release.xcconfig */;
+			baseConfigurationReference = 6DB13FC5A3B74F04B40DB5AE /* Pods-ExpofpExample-ExpofpExampleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = ExpofpExampleTests/Info.plist;
@@ -529,7 +523,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AA3F1E1D8FA314CF9061EB6 /* Pods-ExpofpExample.debug.xcconfig */;
+			baseConfigurationReference = 8D2F0F8E3744998B7BC4C920 /* Pods-ExpofpExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -544,6 +538,69 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSAuthCore/AWSAuthCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCore/AWSCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSKinesis/AWSKinesis.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSMobileClient/AWSMobileClient.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSPinpoint/AWSPinpoint.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DoubleConversion/DoubleConversion.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RCT-Folly/folly.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RCTTypeSafety/RCTTypeSafety.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-Codegen/React_Codegen.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/React.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-CoreModules/CoreModules.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-FabricImage/React_FabricImage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-ImageManager/React_ImageManager.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-Mapbuffer/React_Mapbuffer.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTAnimation/RCTAnimation.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTAppDelegate/React_RCTAppDelegate.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTBlob/RCTBlob.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTFabric/RCTFabric.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTImage/RCTImage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTLinking/RCTLinking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTNetwork/RCTNetwork.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTSettings/RCTSettings.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTText/RCTText.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-RCTVibration/RCTVibration.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-cxxreact/cxxreact.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-debug/React_debug.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-hermes/reacthermes.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-jserrorhandler/React_jserrorhandler.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-jsi/jsi.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-jsiexecutor/jsireact.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-jsinspector/jsinspector.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-logger/logger.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-nativeconfig/React_nativeconfig.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-perflogger/reactperflogger.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-rendererdebug/React_rendererdebug.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-runtimescheduler/React_runtimescheduler.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React-utils/React_utils.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SocketRocket/SocketRocket.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Yoga/yoga.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/fmt/fmt.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/glog/glog.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/libevent/libevent.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/react-native-expofp/react_native_expofp.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/FBLazyVector\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTRequired\"",
+					"\"${PODS_ROOT}/Headers/Public/React-callinvoker\"",
+					"\"${PODS_ROOT}/Headers/Public/React-runtimeexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/hermes-engine\"",
+					"\"$(PODS_ROOT)/DoubleConversion\"",
+					"\"$(PODS_ROOT)/boost\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(PODS_TARGET_SRCROOT)/include/\"",
+					"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF/Headers/",
+				);
 				INFOPLIST_FILE = ExpofpExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -551,6 +608,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -567,7 +625,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09626F2C04BB01AAF9883C3E /* Pods-ExpofpExample.release.xcconfig */;
+			baseConfigurationReference = 75E91E3746DCD6A3F2207CE4 /* Pods-ExpofpExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -601,6 +659,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -631,6 +690,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -656,11 +716,19 @@
 					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
 					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
 					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSAuthCore/AWSAuthCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCore/AWSCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSKinesis/AWSKinesis.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSMobileClient/AWSMobileClient.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSPinpoint/AWSPinpoint.framework/Headers\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
+					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SDKROOT)/usr/lib/swift\"",
@@ -692,6 +760,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -722,6 +791,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -740,11 +810,17 @@
 					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
 					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
 					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSAuthCore/AWSAuthCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCore/AWSCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSKinesis/AWSKinesis.framework/Headers\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
+					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SDKROOT)/usr/lib/swift\"",
@@ -752,6 +828,7 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
