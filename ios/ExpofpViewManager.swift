@@ -1,6 +1,7 @@
 import ExpoFpFplan
+import ExpoFpCommon
 import SwiftUI
-//import ExpoFpCrowdConnected
+import ExpoFpCrowdConnected
 
 @objc(ExpofpViewManager)
 class ExpofpViewManager: RCTViewManager {
@@ -25,6 +26,10 @@ class ExpoFPViewProxy: UIView {
         vc.view.frame = bounds
         self.addSubview(vc.view)
         self.returningView = vc.view
+        
+        let locationProvider = CrowdConnectedProvider(Settings("bd931173", "5139171006c448219db05ca250afff45", "ENYt9213LF8339rlS8P7tH2341VEdK52"))
+        GlobalLocationProvider.initialize(locationProvider)
+        GlobalLocationProvider.start()
     }
     
     required init?(coder: NSCoder) {
@@ -50,6 +55,8 @@ class ExpoFPDataStore: ObservableObject {
 
 struct ExpoFP: View {
     @EnvironmentObject var dataStore: ExpoFPDataStore
+    
+    
     var fplanView = FplanView()
     //let locationProvider: LocationProvider = CrowdConnectedProvider(Settings("APP_KEY", "TOKEN", "SECRET"))
     
