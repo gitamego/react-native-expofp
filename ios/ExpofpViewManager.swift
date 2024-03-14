@@ -26,10 +26,6 @@ class ExpoFPViewProxy: UIView {
         vc.view.frame = bounds
         self.addSubview(vc.view)
         self.returningView = vc.view
-        
-        // let locationProvider: LocationProvider = CrowdConnectedProvider(Settings("APP_KEY", "TOKEN", "SECRET"))
-        // GlobalLocationProvider.initialize(locationProvider)
-        // GlobalLocationProvider.start()
     }
     
     required init?(coder: NSCoder) {
@@ -41,12 +37,23 @@ class ExpoFPViewProxy: UIView {
             dataStore.url = url
         }
     }
+
+    @objc var crowdConnectedSettings: NSDictionary = [:] {
+        didSet {
+            if let appKey = crowdConnectedProvider["appKey"] as? String,
+                let token = crowdConnectedProvider["token"] as? String,
+                let secret = crowdConnectedProvider["secret"] as? String {
+                let locationProvider: LocationProvider = CrowdConnectedProvider(Settings(appKey, token, secret))
+                GlobalLocationProvider.initialize(locationProvider)
+                GlobalLocationProvider.start()
+            }
+        }
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         self.returningView?.frame = bounds
     }
-    
 }
 
 class ExpoFPDataStore: ObservableObject {
@@ -55,8 +62,7 @@ class ExpoFPDataStore: ObservableObject {
 
 struct ExpoFP: View {
     @EnvironmentObject var dataStore: ExpoFPDataStore
-    
-    
+        
     var fplanView = FplanView()
     
     var body: some View {

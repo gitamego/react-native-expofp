@@ -14,6 +14,11 @@ const LINKING_ERROR =
 type ExpofpProps = {
   url: string;
   style: ViewStyle;
+  crowdConnectedSettings: {
+    appKey: string;
+    token: string;
+    secret: string;
+  }
 };
 
 const ComponentName = 'ExpofpView';
