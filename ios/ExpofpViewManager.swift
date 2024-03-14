@@ -40,9 +40,9 @@ class ExpoFPViewProxy: UIView {
 
     @objc var crowdConnectedSettings: NSDictionary = [:] {
         didSet {
-            if let appKey = crowdConnectedProvider["appKey"] as? String,
-                let token = crowdConnectedProvider["token"] as? String,
-                let secret = crowdConnectedProvider["secret"] as? String {
+            if let appKey = crowdConnectedSettings["appKey"] as? String,
+                let token = crowdConnectedSettings["token"] as? String,
+                let secret = crowdConnectedSettings["secret"] as? String {
                 let locationProvider: LocationProvider = CrowdConnectedProvider(Settings(appKey, token, secret))
                 GlobalLocationProvider.initialize(locationProvider)
                 GlobalLocationProvider.start()
