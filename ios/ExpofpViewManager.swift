@@ -6,8 +6,13 @@ import ExpoFpCrowdConnected
 @objc(ExpofpViewManager)
 class ExpofpViewManager: RCTViewManager {
     
-    override func view() -> ExpoFPViewProxy? {
-        return ExpoFPViewProxy()
+    private var expoFPViewProxy: ExpoFPViewProxy?
+    
+    override func view() -> UIView! {
+        if expoFPViewProxy == nil {
+            expoFPViewProxy = ExpoFPViewProxy()
+        }
+        return expoFPViewProxy
     }
     
     @objc override static func requiresMainQueueSetup() -> Bool {
@@ -65,14 +70,16 @@ struct ExpoFP: View {
         
     var fplanView = FplanView()
     
+    @State private var isViewInitialized: Bool = false
+    
     var body: some View {
         VStack
         {
             fplanView.onAppear{
-                fplanView.load(dataStore.url as String, useGlobalLocationProvider: true)
-            }
-            .onDisappear {
-                fplanView.destoy()
+                if (!isViewInitialized) {
+                    fplanView.load(dataStore.url as String, useGlobalLocationProvider: true)
+                    isViewInitialized = true
+                }
             }
         }
     }
