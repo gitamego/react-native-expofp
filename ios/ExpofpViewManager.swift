@@ -48,8 +48,7 @@ class ExpoFPViewProxy: UIView {
             if let appKey = crowdConnectedSettings["appKey"] as? String,
                 let token = crowdConnectedSettings["token"] as? String,
                 let secret = crowdConnectedSettings["secret"] as? String {
-                let locationProvider: LocationProvider = CrowdConnectedProvider(Settings(appKey, token, secret))
-                GlobalLocationProvider.initialize(locationProvider)
+                let locationProvider: LocationProvider = CrowdConnectedProvider(Settings(appKey, token, secret, Mode.IPS_AND_GPS))                GlobalLocationProvider.initialize(locationProvider)
                 GlobalLocationProvider.start()
             }
         }
