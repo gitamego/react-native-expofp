@@ -1,28 +1,27 @@
 package com.expofp
 
+import android.Manifest
+import android.app.Activity
 import android.app.Application
-import android.graphics.Color
-import android.telecom.Call.Details
+import android.os.Build
 import android.view.View
-import com.expofp.fplan.FplanEventsListener
+import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import com.expofp.common.GlobalLocationProvider
+import com.expofp.crowdconnected.CrowdConnectedProvider
+import com.expofp.crowdconnected.Mode
+import com.expofp.crowdconnected.Settings
 import com.expofp.fplan.FplanView
-import com.facebook.react.bridge.ReadableArray
+import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
-import okhttp3.Route
-import android.util.Log
-import com.facebook.react.bridge.ReadableMap
-import android.widget.Toast
-import com.expofp.common.GlobalLocationProvider
-import com.expofp.crowdconnected.Settings
-import com.expofp.crowdconnected.CrowdConnectedProvider
-import com.expofp.crowdconnected.Mode
+
 
 class ExpofpViewManager : SimpleViewManager<View>() {
-  private var reactContext: ThemedReactContext? = null
+    private var reactContext: ThemedReactContext? = null
 
-  override fun getName() = "ExpofpView"
+    override fun getName() = "ExpofpView"
 
   override fun createViewInstance(reactContext: ThemedReactContext): View {
       this.reactContext = reactContext
@@ -40,6 +39,16 @@ class ExpofpViewManager : SimpleViewManager<View>() {
   fun setCrowdConnectedSettings(view: FplanView, settingsMap: ReadableMap?) {
       val context = reactContext?.applicationContext ?: return
       val application = context as? Application ?: return
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+          val activity = reactContext?.currentActivity
+          if (activity != null) {
+              ActivityCompat.requestPermissions(
+                      activity,
+                      arrayOf(Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT),
+                      0
+              )
+          }
+      }
       settingsMap?.let {
           val lpSettings = Settings(
               it.getString("appKey") ?: "",
