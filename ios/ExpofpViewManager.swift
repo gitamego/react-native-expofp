@@ -48,7 +48,8 @@ class ExpoFPViewProxy: UIView {
             if let appKey = crowdConnectedSettings["appKey"] as? String,
                 let token = crowdConnectedSettings["token"] as? String,
                 let secret = crowdConnectedSettings["secret"] as? String {
-                let locationProvider: LocationProvider = CrowdConnectedProvider(Settings(appKey, token, secret, Mode.IPS_AND_GPS))                GlobalLocationProvider.initialize(locationProvider)
+                let locationProvider: LocationProvider = CrowdConnectedProvider(Settings(appKey, token, secret, Mode.IPS_AND_GPS));               
+                GlobalLocationProvider.initialize(locationProvider)
                 GlobalLocationProvider.start()
             }
         }
@@ -69,16 +70,18 @@ struct ExpoFP: View {
         
     var fplanView = FplanView()
     
-    @State private var isViewInitialized: Bool = false
+    @State private var loadedUrl: NSString? = nil
     
     var body: some View {
         VStack
         {
             fplanView.onAppear{
-                if (!isViewInitialized) {
+                if (loadedUrl !== dataStore.url) {
                     fplanView.load(dataStore.url as String, useGlobalLocationProvider: true)
-                    isViewInitialized = true
+                    loadedUrl = dataStore.url
                 }
+            }.onDisappear{
+                fplanView.clear()
             }
         }
     }
