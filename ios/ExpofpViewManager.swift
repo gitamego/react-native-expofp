@@ -36,21 +36,26 @@ class ExpoFPViewProxy: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    @objc var url: NSString = "" {
-        didSet{
-            dataStore.url = url
-        }
-    }
 
-    @objc var crowdConnectedSettings: NSDictionary = [:] {
+    @objc var settings: NSDictionary = [:] {
         didSet {
-            if let appKey = crowdConnectedSettings["appKey"] as? String,
-                let token = crowdConnectedSettings["token"] as? String,
-                let secret = crowdConnectedSettings["secret"] as? String {
-                let locationProvider: LocationProvider = CrowdConnectedProvider(Settings(appKey, token, secret, Mode.IPS_AND_GPS));               
+            if let url = settings["url"] as? NSString,
+                let appKey = settings["appKey"] as? String,
+                let token = settings["token"] as? String,
+                let secret = settings["secret"] as? String {
+                let ccSettings = Settings(
+                    appKey,
+                    token,
+                    secret,
+                    Mode.IPS_AND_GPS
+                );
+                if let onesignalUserId = settings["oneSignalUserId"] as? String {
+                    ccSettings.addAlias("onesignal_user_id", onesignalUserId)            
+                }
+                let locationProvider: LocationProvider = CrowdConnectedProvider(ccSettings);
                 GlobalLocationProvider.initialize(locationProvider)
                 GlobalLocationProvider.start()
+                dataStore.url = url
             }
         }
     }

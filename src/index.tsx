@@ -12,12 +12,10 @@ const LINKING_ERROR =
   '- You are not using Expo Go\n';
 
 type ExpofpProps = {
-  url: string;
   style: ViewStyle;
-  crowdConnectedSettings: {
-    appKey: string;
-    token: string;
-    secret: string;
+  settings: {
+    url: string,
+    onesginalUserId?: string;
   }
 };
 
