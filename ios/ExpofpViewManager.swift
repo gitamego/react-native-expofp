@@ -39,23 +39,26 @@ class ExpoFPViewProxy: UIView {
 
     @objc var settings: NSDictionary = [:] {
         didSet {
-            if let url = settings["url"] as? NSString,
-                let appKey = settings["appKey"] as? String,
-                let token = settings["token"] as? String,
-                let secret = settings["secret"] as? String {
-                let ccSettings = Settings(
-                    appKey,
-                    token,
-                    secret,
-                    Mode.IPS_AND_GPS
-                );
-                if let onesignalUserId = settings["oneSignalUserId"] as? String {
-                    ccSettings.addAlias("onesignal_user_id", onesignalUserId)            
+            if let url = settings["url"] as? NSString {
+                if let appKey = settings["appKey"] as? String,
+                    let token = settings["token"] as? String,
+                    let secret = settings["secret"] as? String {
+                    let ccSettings = Settings(
+                        appKey,
+                        token,
+                        secret,
+                        Mode.IPS_AND_GPS
+                    );
+                    if let onesignalUserId = settings["oneSignalUserId"] as? String {
+                        ccSettings.addAlias("onesignal_user_id", onesignalUserId)
+                    }
+                    let locationProvider: LocationProvider = CrowdConnectedProvider(ccSettings);
+                    GlobalLocationProvider.initialize(locationProvider)
+                    GlobalLocationProvider.start()
+                    dataStore.url = url
+                } else {
+                    dataStore.url = url
                 }
-                let locationProvider: LocationProvider = CrowdConnectedProvider(ccSettings);
-                GlobalLocationProvider.initialize(locationProvider)
-                GlobalLocationProvider.start()
-                dataStore.url = url
             }
         }
     }

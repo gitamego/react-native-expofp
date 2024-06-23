@@ -35,30 +35,35 @@ class ExpofpViewManager : SimpleViewManager<View>() {
 
     @ReactProp(name = "settings")
     fun setSettings(view: FplanView, settingsMap: ReadableMap?) {
-        val context = reactContext?.applicationContext ?: return
-        val application = context as? Application ?: return
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            val activity = reactContext?.currentActivity
-            if (activity != null) {
-                ActivityCompat.requestPermissions(
-                        activity,
-                        arrayOf(Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT),
-                        2
-                )
-            }
-        }
         settingsMap?.let {
-            val lpSettings = com.expofp.crowdconnected.Settings(
-                    settingsMap.getString("appKey") ?: "",
-                    settingsMap.getString("token") ?: "",
-                    settingsMap.getString("secret") ?: "",
-                    Mode.IPS_AND_GPS
-            )
-            lpSettings.setServiceNotificationInfo("Knowledge - ServiceNow is running", R.drawable.common_google_signin_btn_icon_dark);
-            lpSettings.setAlias("onesignal_user_id", it.getString("oneSignalUserId") ?: "");
-            val locationProvider = CrowdConnectedProvider(application, lpSettings)
-            GlobalLocationProvider.init(locationProvider)
-            GlobalLocationProvider.start()
+            var appKey = settingsMap.getString("appKey")
+            val token = settingsMap.getString("token")
+            val secret = settingsMap.getString("secret")
+            if (appKey != null && token != null && secret != null) {
+                val context = reactContext?.applicationContext ?: return
+                val application = context as? Application ?: return
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                    val activity = reactContext?.currentActivity
+                    if (activity != null) {
+                        ActivityCompat.requestPermissions(
+                                activity,
+                                arrayOf(Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT),
+                                2
+                        )
+                    }
+                }
+                val lpSettings = com.expofp.crowdconnected.Settings(
+                        settingsMap.getString("appKey") ?: "",
+                        settingsMap.getString("token") ?: "",
+                        settingsMap.getString("secret") ?: "",
+                        Mode.IPS_AND_GPS
+                )
+                lpSettings.setServiceNotificationInfo("Knowledge - ServiceNow is running", R.drawable.common_google_signin_btn_icon_dark);
+                lpSettings.setAlias("onesignal_user_id", it.getString("oneSignalUserId") ?: "");
+                val locationProvider = CrowdConnectedProvider(application, lpSettings)
+                GlobalLocationProvider.init(locationProvider)
+                GlobalLocationProvider.start()
+            }
             view.init(it.getString("url") ?: "", com.expofp.fplan.models.Settings().withGlobalLocationProvider());
         }
     }
