@@ -14,8 +14,11 @@ const LINKING_ERROR =
 type ExpofpProps = {
   style: ViewStyle;
   settings: {
-    url: string,
-    onesginalUserId?: string;
+    url: string;
+    oneSignalUserId?: string,
+    appKey: string
+    token: string;
+    secret: string;
   }
 };
 
