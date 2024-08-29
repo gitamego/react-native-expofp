@@ -16,9 +16,9 @@ type ExpofpProps = {
   settings: {
     url: string;
     oneSignalUserId?: string,
-    appKey: string
-    token: string;
-    secret: string;
+    appKey?: string
+    token?: string;
+    secret?: string;
   }
 };
 
