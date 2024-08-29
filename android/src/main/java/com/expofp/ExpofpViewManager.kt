@@ -58,7 +58,7 @@ class ExpofpViewManager : SimpleViewManager<View>() {
                         settingsMap.getString("secret") ?: "",
                         Mode.IPS_AND_GPS
                 )
-                lpSettings.setServiceNotificationInfo("Knowledge - ServiceNow is running", R.drawable.common_google_signin_btn_icon_dark);
+                lpSettings.setServiceNotificationInfo("Background Location is running", R.drawable.common_google_signin_btn_icon_dark);
                 lpSettings.setAlias("onesignal_user_id", it.getString("oneSignalUserId") ?: "");
                 val locationProvider = CrowdConnectedProvider(application, lpSettings)
                 GlobalLocationProvider.init(locationProvider)
