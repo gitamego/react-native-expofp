@@ -34,6 +34,14 @@
     "prepare": "bob build",
     "release": "release-it"
   },
+  "bugs": {
+    "url": "https://github.com/gitamego/react-native-expofp/issues"
+  },
+  "homepage": "https://github.com/gitamego/react-native-expofp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitamego/react-native-expofp.git"
+  },
   "keywords": [
     "react-native",
     "ios",
