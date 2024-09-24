@@ -1,6 +1,6 @@
 {
   "name": "react-native-expofp",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React Native library for displaying expo plans",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -39,16 +39,8 @@
     "ios",
     "android"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/artieeg/react-native-expofp.git"
-  },
-  "author": "Artem <artmh@pm.me> (https://github.com/artieeg)",
+  "author": "Amego",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/artieeg/react-native-expofp/issues"
-  },
-  "homepage": "https://github.com/artieeg/react-native-expofp#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
