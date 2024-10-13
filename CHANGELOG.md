@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.3](https://github.com/gitamego/react-native-expofp/compare/1.0.2...1.0.3) - 2024-10-13
+- update version by @arys in https://github.com/gitamego/react-native-expofp/pull/12
+
 ## [1.0.2](https://github.com/gitamego/react-native-expofp/compare/1.0.1...1.0.2) - 2024-10-11
 - update expofp android by @arys in https://github.com/gitamego/react-native-expofp/pull/9
 - tagpr by @arys in https://github.com/gitamego/react-native-expofp/pull/10
