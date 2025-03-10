@@ -4,6 +4,8 @@ import {
   Platform,
   type ViewStyle,
   NativeModules,
+  TurboModuleRegistry,
+  TurboModule,
 } from 'react-native';
 
 const LINKING_ERROR =
@@ -25,13 +27,6 @@ type ExpofpProps = {
 
 const ComponentName = 'ExpofpView';
 
-// Add native module interface
-interface ExpofpModule {
-  preload(url: string): Promise<void>;
-}
-
-const ExpofpModule = NativeModules.ExpofpModule as ExpofpModule;
-
 export const ExpofpView =
   UIManager.getViewManagerConfig(ComponentName) != null
     ? requireNativeComponent<ExpofpProps>(ComponentName)
@@ -39,11 +34,24 @@ export const ExpofpView =
         throw new Error(LINKING_ERROR);
       };
 
-// Add preload function
+interface ExpofpModule extends TurboModule {
+  preload(url: string): Promise<void>;
+}
+
 export const preload = async (url: string): Promise<void> => {
-  if (!UIManager.getViewManagerConfig(ComponentName)) {
-    throw new Error(LINKING_ERROR);
+  if (Platform.OS === 'ios') {
+    const Module = TurboModuleRegistry.get<ExpofpModule>('ExpofpModule');
+    if (!Module) {
+      throw new Error(LINKING_ERROR);
+    }
+    return Module.preload(url);
   }
-  // Use the ExpofpModule instead of UIManager commands since the command is undefined
-  return ExpofpModule.preload(url);
+  if (Platform.OS === 'android') {
+    const Module = NativeModules.ExpofpModule;
+    if (!Module) {
+      throw new Error(LINKING_ERROR);
+    }
+    return Module.preload(url);
+  }
+  throw new Error('Unsupported platform');
 };

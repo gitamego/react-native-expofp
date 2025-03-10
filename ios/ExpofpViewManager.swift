@@ -18,15 +18,6 @@ class ExpofpViewManager: RCTViewManager {
     @objc override static func requiresMainQueueSetup() -> Bool {
         return true
     }
-    
-    @objc func preload(_ url: NSString,
-                       resolver resolve: @escaping RCTPromiseResolveBlock,
-                       rejecter reject: @escaping RCTPromiseRejectBlock) {
-        DispatchQueue.main.async {
-            SharedFplanView.preload(url as String, settings: Settings())
-            resolve(nil)
-        }
-    }
 }
 
 class ExpoFPViewProxy: UIView {
