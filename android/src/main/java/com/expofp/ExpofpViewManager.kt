@@ -14,12 +14,11 @@ import com.expofp.common.GlobalLocationProvider
 import com.expofp.crowdconnected.CrowdConnectedProvider
 import com.expofp.crowdconnected.Mode
 import com.expofp.crowdconnected.Settings
-import com.expofp.fplan.FplanView
+import com.expofp.fplan.SharedFplanView
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
-
 
 class ExpofpViewManager : SimpleViewManager<View>() {
     private var reactContext: ThemedReactContext? = null
@@ -28,13 +27,13 @@ class ExpofpViewManager : SimpleViewManager<View>() {
 
     override fun createViewInstance(reactContext: ThemedReactContext): View {
         this.reactContext = reactContext
-        var view = FplanView(reactContext)
+        var view = SharedFplanView(reactContext)
 
         return view;
     }
 
     @ReactProp(name = "settings")
-    fun setSettings(view: FplanView, settingsMap: ReadableMap?) {
+    fun setSettings(view: SharedFplanView, settingsMap: ReadableMap?) {
         settingsMap?.let {
             var appKey = settingsMap.getString("appKey")
             val token = settingsMap.getString("token")
@@ -64,7 +63,7 @@ class ExpofpViewManager : SimpleViewManager<View>() {
                 GlobalLocationProvider.init(locationProvider)
                 GlobalLocationProvider.start()
             }
-            view.init(it.getString("url") ?: "", com.expofp.fplan.models.Settings().withGlobalLocationProvider());
+            view.load(it.getString("url") ?: "", com.expofp.fplan.models.Settings().withGlobalLocationProvider());
         }
     }
 }

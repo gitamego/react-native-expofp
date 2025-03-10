@@ -16,11 +16,11 @@ type ExpofpProps = {
   style: ViewStyle;
   settings: {
     url: string;
-    oneSignalUserId?: string,
-    appKey?: string
+    oneSignalUserId?: string;
+    appKey?: string;
     token?: string;
     secret?: string;
-  }
+  };
 };
 
 const ComponentName = 'ExpofpView';
@@ -44,9 +44,6 @@ export const preload = async (url: string): Promise<void> => {
   if (!UIManager.getViewManagerConfig(ComponentName)) {
     throw new Error(LINKING_ERROR);
   }
-  return UIManager.dispatchViewManagerCommand(
-    ComponentName,
-    'preload',
-    [url]
-  );
+  // Use the ExpofpModule instead of UIManager commands since the command is undefined
+  return ExpofpModule.preload(url);
 };
