@@ -3,6 +3,7 @@ import {
   UIManager,
   Platform,
   type ViewStyle,
+  NativeModules,
 } from 'react-native';
 
 const LINKING_ERROR =
@@ -24,9 +25,28 @@ type ExpofpProps = {
 
 const ComponentName = 'ExpofpView';
 
+// Add native module interface
+interface ExpofpModule {
+  preload(url: string): Promise<void>;
+}
+
+const ExpofpModule = NativeModules.ExpofpModule as ExpofpModule;
+
 export const ExpofpView =
   UIManager.getViewManagerConfig(ComponentName) != null
     ? requireNativeComponent<ExpofpProps>(ComponentName)
     : () => {
         throw new Error(LINKING_ERROR);
       };
+
+// Add preload function
+export const preload = async (url: string): Promise<void> => {
+  if (!UIManager.getViewManagerConfig(ComponentName)) {
+    throw new Error(LINKING_ERROR);
+  }
+  return UIManager.dispatchViewManagerCommand(
+    ComponentName,
+    'preload',
+    [url]
+  );
+};
