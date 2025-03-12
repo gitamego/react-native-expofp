@@ -43,12 +43,7 @@ class ExpoFPViewProxy: UIView {
                 if let appKey = settings["appKey"] as? String,
                     let token = settings["token"] as? String,
                     let secret = settings["secret"] as? String {
-                    let ccSettings = Settings(
-                        appKey,
-                        token,
-                        secret,
-                        Mode.IPS_AND_GPS
-                    );
+                    let ccSettings = Settings(appKey: appKey, token: token, secret: secret, mode: Mode.IPS_AND_GPS)
                     if let onesignalUserId = settings["oneSignalUserId"] as? String {
                         ccSettings.addAlias("onesignal_user_id", onesignalUserId)
                     }
@@ -76,7 +71,7 @@ class ExpoFPDataStore: ObservableObject {
 struct ExpoFP: View {
     @EnvironmentObject var dataStore: ExpoFPDataStore
         
-    var fplanView = FplanView()
+    var fplanView = SharedFplanView()
     
     @State private var loadedUrl: NSString? = nil
     
