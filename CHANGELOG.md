@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.6](https://github.com/gitamego/react-native-expofp/compare/1.0.5...1.0.6) - 2025-03-12
+- fix(js): turbo module type by @arys in https://github.com/gitamego/react-native-expofp/pull/19
+
 ## [1.0.5](https://github.com/gitamego/react-native-expofp/compare/1.0.4...1.0.5) - 2025-03-12
 - update expofp ios by @arys in https://github.com/gitamego/react-native-expofp/pull/16
 - feat(ios): add SPM support by @arys in https://github.com/gitamego/react-native-expofp/pull/18
