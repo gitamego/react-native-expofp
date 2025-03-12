@@ -5,7 +5,7 @@ import {
   type ViewStyle,
   NativeModules,
   TurboModuleRegistry,
-  TurboModule,
+  type TurboModule,
 } from 'react-native';
 
 const LINKING_ERROR =
