@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.7](https://github.com/gitamego/react-native-expofp/compare/1.0.6...1.0.7) - 2025-03-21
+- chore(ios): update expofp by @arys in https://github.com/gitamego/react-native-expofp/pull/21
+
 ## [1.0.6](https://github.com/gitamego/react-native-expofp/compare/1.0.5...1.0.6) - 2025-03-12
 - fix(js): turbo module type by @arys in https://github.com/gitamego/react-native-expofp/pull/19
 
