@@ -55,7 +55,9 @@ class ExpofpViewManager : SimpleViewManager<View>() {
                         settingsMap.getString("appKey") ?: "",
                         settingsMap.getString("token") ?: "",
                         settingsMap.getString("secret") ?: "",
-                        Mode.IPS_AND_GPS
+                        Mode.IPS_AND_GPS,
+                        true,
+                        null
                 )
                 lpSettings.setServiceNotificationInfo("Background Location is running", R.drawable.common_google_signin_btn_icon_dark);
                 lpSettings.setAlias("onesignal_user_id", it.getString("oneSignalUserId") ?: "");
