@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.8](https://github.com/gitamego/react-native-expofp/compare/1.0.7...1.0.8) - 2025-03-24
+- feat: enable heading by @arys in https://github.com/gitamego/react-native-expofp/pull/23
+
 ## [1.0.7](https://github.com/gitamego/react-native-expofp/compare/1.0.6...1.0.7) - 2025-03-21
 - chore(ios): update expofp by @arys in https://github.com/gitamego/react-native-expofp/pull/21
 
