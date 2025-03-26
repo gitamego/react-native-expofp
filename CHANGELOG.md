@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.9](https://github.com/gitamego/react-native-expofp/compare/1.0.8...1.0.9) - 2025-03-26
+- fix(location): tracking and alias set by @arys in https://github.com/gitamego/react-native-expofp/pull/25
+
 ## [1.0.8](https://github.com/gitamego/react-native-expofp/compare/1.0.7...1.0.8) - 2025-03-24
 - feat: enable heading by @arys in https://github.com/gitamego/react-native-expofp/pull/23
 
