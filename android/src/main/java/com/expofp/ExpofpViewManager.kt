@@ -19,6 +19,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
+// import com.expofp.crowdconnectedbackground.CrowdConnectedBackgroundProvider
 
 class ExpofpViewManager : SimpleViewManager<View>() {
     private var reactContext: ThemedReactContext? = null
@@ -54,6 +55,7 @@ class ExpofpViewManager : SimpleViewManager<View>() {
                 )
                 lpSettings.setServiceNotificationInfo("Background Location is running", R.drawable.common_google_signin_btn_icon_dark);
                 val locationProvider = CrowdConnectedProvider(application, lpSettings)
+                // val locationProvider = CrowdConnectedBackgroundProvider(application, lpSettings)
                 GlobalLocationProvider.init(locationProvider)
                 GlobalLocationProvider.start()
             }
