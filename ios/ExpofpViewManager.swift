@@ -43,7 +43,8 @@ class ExpoFPViewProxy: UIView {
                 if let appKey = settings["appKey"] as? String,
                     let token = settings["token"] as? String,
                     let secret = settings["secret"] as? String {
-                    let ccSettings = Settings(appKey: appKey, token: token, secret: secret, mode: Mode.IPS_AND_GPS, inBackground: true, enableHeading: true)
+                    // let ccSettings = Settings(appKey: appKey, token: token, secret: secret, mode: Mode.IPS_AND_GPS, inBackground: true, enableHeading: true)
+                    let ccSettings = Settings(appKey: appKey, token: token, secret: secret, mode: Mode.IPS_AND_GPS, inBackground: false, enableHeading: true)
                     if let onesignalUserId = settings["oneSignalUserId"] as? String {
                         ccSettings.addAlias("onesignal_user_id", onesignalUserId)
                     }
