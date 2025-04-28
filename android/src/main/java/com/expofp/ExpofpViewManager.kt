@@ -32,6 +32,11 @@ class ExpofpViewManager : SimpleViewManager<View>() {
         return view;
     }
 
+    override fun onDropViewInstance(view: SharedFplanView) {
+        view.destroy()
+        super.onDropViewInstance(view)
+    }
+
     @ReactProp(name = "settings")
     fun setSettings(view: SharedFplanView, settingsMap: ReadableMap?) {
         println("setSettings: $settingsMap")
