@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.10](https://github.com/gitamego/react-native-expofp/compare/1.0.9...1.0.10) - 2025-04-28
+- feat(android): expofp 4.10 by @arys in https://github.com/gitamego/react-native-expofp/pull/27
+
 ## [1.0.9](https://github.com/gitamego/react-native-expofp/compare/1.0.8...1.0.9) - 2025-03-26
 - fix(location): tracking and alias set by @arys in https://github.com/gitamego/react-native-expofp/pull/25
 
