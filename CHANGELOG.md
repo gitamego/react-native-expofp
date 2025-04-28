@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.12](https://github.com/gitamego/react-native-expofp/compare/1.0.11...1.0.12) - 2025-04-28
+- feat(android): comments for android location by @arys in https://github.com/gitamego/react-native-expofp/pull/32
+
 ## [1.0.11](https://github.com/gitamego/react-native-expofp/compare/1.0.10...1.0.11) - 2025-04-28
 - fix(android): expo fpplan view by @arys in https://github.com/gitamego/react-native-expofp/pull/29
 - fix(ios): disable background by default by @arys in https://github.com/gitamego/react-native-expofp/pull/31
