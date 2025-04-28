@@ -14,7 +14,7 @@ import com.expofp.common.GlobalLocationProvider
 import com.expofp.crowdconnected.CrowdConnectedProvider
 import com.expofp.crowdconnected.Mode
 import com.expofp.crowdconnected.Settings
-import com.expofp.fplan.SharedFplanView
+import com.expofp.fplan.FplanView
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
@@ -27,18 +27,18 @@ class ExpofpViewManager : SimpleViewManager<View>() {
 
     override fun createViewInstance(reactContext: ThemedReactContext): View {
         this.reactContext = reactContext
-        var view = SharedFplanView(reactContext)
+        var view = FplanView(reactContext)
 
         return view;
     }
 
-    override fun onDropViewInstance(view: SharedFplanView) {
+    override fun onDropViewInstance(view: FplanView) {
         view.destroy()
         super.onDropViewInstance(view)
     }
 
     @ReactProp(name = "settings")
-    fun setSettings(view: SharedFplanView, settingsMap: ReadableMap?) {
+    fun setSettings(view: FplanView, settingsMap: ReadableMap?) {
         println("setSettings: $settingsMap")
         settingsMap?.let {
             var appKey = settingsMap.getString("appKey")
