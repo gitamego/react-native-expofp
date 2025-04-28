@@ -14,6 +14,7 @@ import com.expofp.common.GlobalLocationProvider
 import com.expofp.crowdconnected.CrowdConnectedProvider
 import com.expofp.crowdconnected.Mode
 import com.expofp.crowdconnected.Settings
+// import com.expofp.crowdconnectedbackground.CrowdConnectedBackgroundProvider
 import com.expofp.fplan.FplanView
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.uimanager.SimpleViewManager
@@ -32,8 +33,8 @@ class ExpofpViewManager : SimpleViewManager<View>() {
         return view;
     }
 
-    override fun onDropViewInstance(view: FplanView) {
-        view.destroy()
+    override fun onDropViewInstance(view: View) {
+        (view as? FplanView)?.destroy()
         super.onDropViewInstance(view)
     }
 
@@ -59,6 +60,7 @@ class ExpofpViewManager : SimpleViewManager<View>() {
                 )
                 lpSettings.setServiceNotificationInfo("Background Location is running", R.drawable.common_google_signin_btn_icon_dark);
                 val locationProvider = CrowdConnectedProvider(application, lpSettings)
+                // val locationProvider = CrowdConnectedBackgroundProvider(application, lpSettings)
                 GlobalLocationProvider.init(locationProvider)
                 GlobalLocationProvider.start()
             }
