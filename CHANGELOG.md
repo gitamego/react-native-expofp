@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.11](https://github.com/gitamego/react-native-expofp/compare/1.0.10...1.0.11) - 2025-04-28
+- fix(android): expo fpplan view by @arys in https://github.com/gitamego/react-native-expofp/pull/29
+- fix(ios): disable background by default by @arys in https://github.com/gitamego/react-native-expofp/pull/31
+
 ## [1.0.10](https://github.com/gitamego/react-native-expofp/compare/1.0.9...1.0.10) - 2025-04-28
 - feat(android): expofp 4.10 by @arys in https://github.com/gitamego/react-native-expofp/pull/27
 
