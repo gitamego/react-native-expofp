@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.13](https://github.com/gitamego/react-native-expofp/compare/1.0.12...1.0.13) - 2025-05-02
+- feat(android): update crowd connected by @arys in https://github.com/gitamego/react-native-expofp/pull/34
+
 ## [1.0.12](https://github.com/gitamego/react-native-expofp/compare/1.0.11...1.0.12) - 2025-04-28
 - feat(android): comments for android location by @arys in https://github.com/gitamego/react-native-expofp/pull/32
 
