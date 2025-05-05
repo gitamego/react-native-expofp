@@ -16,6 +16,7 @@ import com.expofp.crowdconnected.Mode
 import com.expofp.crowdconnected.Settings
 // import com.expofp.crowdconnectedbackground.CrowdConnectedBackgroundProvider
 import com.expofp.fplan.FplanView
+import com.expofp.fplan.models.FplanViewState
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
@@ -64,7 +65,9 @@ class ExpofpViewManager : SimpleViewManager<View>() {
                 GlobalLocationProvider.init(locationProvider)
                 GlobalLocationProvider.start()
             }
-            view.load(it.getString("url") ?: "", com.expofp.fplan.models.Settings().withGlobalLocationProvider());
+            if (view.state.equals(FplanViewState.Created)) {
+                view.load(it.getString("url") ?: "", com.expofp.fplan.models.Settings().withGlobalLocationProvider());
+            }
         }
     }
 }
