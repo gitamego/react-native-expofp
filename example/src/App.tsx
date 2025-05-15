@@ -6,7 +6,10 @@ import { ExpofpView } from 'react-native-expofp';
 export default function App() {
   return (
     <View style={styles.container}>
-      <ExpofpView style={styles.box} url="https://demo.expofp.com" />
+      <ExpofpView
+        style={styles.box}
+        settings={{ url: 'http://demo.expofp.com' }}
+      />
     </View>
   );
 }

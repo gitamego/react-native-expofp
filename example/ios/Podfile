@@ -1,3 +1,106 @@
+# ENV['RCT_NEW_ARCH_ENABLED'] = '1'
+# # Resolve react_native_pods.rb with node to allow for hoisting
+# require Pod::Executable.execute_command('node', ['-p',
+#   'require.resolve(
+#     "react-native/scripts/react_native_pods.rb",
+#     {paths: [process.argv[1]]},
+#   )', __dir__]).strip
+# platform :ios, "15.1"
+# prepare_react_native_project!
+
+# # If you are using a `react-native-flipper` your iOS build will fail when `NO_FLIPPER=1` is set.
+# # because `react-native-flipper` depends on (FlipperKit,...) that will be excluded
+# #
+# # To fix this you can also exclude `react-native-flipper` using a `react-native.config.js`
+# # ```js
+# # module.exports = {
+# #   dependencies: {
+# #     ...(process.env.NO_FLIPPER ? { 'react-native-flipper': { platforms: { ios: null } } } : {}),
+# # ```
+
+# linkage = ENV['USE_FRAMEWORKS']
+# if linkage != nil
+#   Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+#   use_frameworks! :linkage => linkage.to_sym
+# end
+
+# target 'ExpofpExample' do
+#   use_frameworks!
+#   #use_frameworks! :linkage => :static
+
+
+#   #use_modular_headers!
+#   config = use_native_modules!
+
+#   #pod 'ExpoFpCrowdConnected', '4.0.2'
+#   #pod "AWSMobileClient"
+#   #pod "AWSAuthCore"
+#   #pod "AWSCognitoIdentityProvider"
+#   #pod "AWSCore"
+#   #pod "AWSCognitoIdentityProviderASF"
+
+
+#   #pod "AWSMobileClient", :modular_headers => true
+
+#   #pod "AWSAuthCore", :modular_headers => true
+#   #pod "AWSCognitoIdentityProvider", :modular_headers => true
+#   #pod "AWSCore", :modular_headers => true
+#   #pod "AWSCognitoIdentityProviderASF", :modular_headers => true
+#   pod 'AWSCore',        :modular_headers => true
+#   pod 'AWSKinesis',     :modular_headers => true
+#   pod 'FMDB',           :modular_headers => true
+
+
+#   #The Swift pod `AWSMobileClient` depends upon `AWSAuthCore`, `AWSCognitoIdentityProvider`, `AWSCore`, and `AWSCognitoIdentityProviderASF`, which do not define modules. To opt into those targets generating module maps (which is necessary to import them from Swift when building as static libraries), you may set `use_modular_headers!` globally in your Podfile, or specify `:modular_headers => true` for particular dependencies.
+
+#   use_react_native!(
+#     :path => config[:reactNativePath],
+#     # Enables Flipper.
+#     #
+#     # Note that if you have use_frameworks! enabled, Flipper will not work and
+#     # you should disable the next line.
+#     #:flipper_configuration => flipper_config,
+#     # An absolute path to your application root.
+#     :app_path => "#{Pod::Config.instance.installation_root}/.."
+#   )
+
+#   target 'ExpofpExampleTests' do
+#     inherit! :complete
+#     # Pods for testing
+#   end
+
+#  post_install do |installer|
+#   react_native_post_install(
+#     installer,
+#     config[:reactNativePath],
+#     :mac_catalyst_enabled => false
+#   )
+
+#   # Rename AWSCore files to `.mm` for Objective-C++ compatibility
+#   %w[
+#     AWSFMDatabaseQueue
+#     AWSFMDatabasePool
+#     AWSFMDatabaseAdditions
+#     AWSFMDatabase
+#     AWSFMDB+AWSHelpers
+#     AWSFMResultSet
+#   ].each do |file|
+#     path = "Pods/AWSCore/AWSCore/FMDB/#{file}.m"
+#     mm_path = "Pods/AWSCore/AWSCore/FMDB/#{file}.mm"
+#     if File.exist?(path)
+#       FileUtils.mv(path, mm_path)
+#     end
+#   end
+#   file_path = 'Pods/AWSCore/AWSCore/FMDB/AWSFMDatabaseQueue.m'
+#   if File.exist?(file_path)
+#     FileUtils.mv(file_path, file_path.sub('.m', '.mm'))
+#   end
+# end
+# end
+
+
+ENV['RCT_NEW_ARCH_ENABLED'] = '1'
+
 # Resolve react_native_pods.rb with node to allow for hoisting
 require Pod::Executable.execute_command('node', ['-p',
   'require.resolve(
@@ -5,69 +108,44 @@ require Pod::Executable.execute_command('node', ['-p',
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
-platform :ios, "15.0"
+platform :ios, '15.1'
 prepare_react_native_project!
 
-# If you are using a `react-native-flipper` your iOS build will fail when `NO_FLIPPER=1` is set.
-# because `react-native-flipper` depends on (FlipperKit,...) that will be excluded
-#
-# To fix this you can also exclude `react-native-flipper` using a `react-native.config.js`
-# ```js
-# module.exports = {
-#   dependencies: {
-#     ...(process.env.NO_FLIPPER ? { 'react-native-flipper': { platforms: { ios: null } } } : {}),
-# ```
-flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
+# Use static frameworks to bundle pods with module maps
+use_frameworks! :linkage => :static
+
+# Opt into modular headers for proper module maps
+use_modular_headers!
 
 linkage = ENV['USE_FRAMEWORKS']
-if linkage != nil
+if linkage
   Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
   use_frameworks! :linkage => linkage.to_sym
 end
 
 target 'ExpofpExample' do
-  use_frameworks!
-  #use_frameworks! :linkage => :static
-
-
-  #use_modular_headers!
+  # Integrate React Native
   config = use_native_modules!
-
-  #pod 'ExpoFpCrowdConnected', '4.0.2'
-  #pod "AWSMobileClient"
-  #pod "AWSAuthCore"
-  #pod "AWSCognitoIdentityProvider"
-  #pod "AWSCore"
-  #pod "AWSCognitoIdentityProviderASF"
-
-
-  #pod "AWSMobileClient", :modular_headers => true
-
-  #pod "AWSAuthCore", :modular_headers => true
-  #pod "AWSCognitoIdentityProvider", :modular_headers => true
-  #pod "AWSCore", :modular_headers => true
-  #pod "AWSCognitoIdentityProviderASF", :modular_headers => true
-
-  #The Swift pod `AWSMobileClient` depends upon `AWSAuthCore`, `AWSCognitoIdentityProvider`, `AWSCore`, and `AWSCognitoIdentityProviderASF`, which do not define modules. To opt into those targets generating module maps (which is necessary to import them from Swift when building as static libraries), you may set `use_modular_headers!` globally in your Podfile, or specify `:modular_headers => true` for particular dependencies.
 
   use_react_native!(
     :path => config[:reactNativePath],
-    # Enables Flipper.
-    #
-    # Note that if you have use_frameworks! enabled, Flipper will not work and
-    # you should disable the next line.
+    # Note: If you enable Flipper here, disable use_frameworks! above
     #:flipper_configuration => flipper_config,
-    # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'ExpofpExampleTests' do
-    inherit! :complete
-    # Pods for testing
-  end
-
   post_install do |installer|
-    # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
+    # Rename all AWSCore FMDB .m files to .mm for Objective-C++ compatibility
+    installer.pods_project.targets.each do |target|
+      if target.name.start_with?('AWSCore')
+        Dir.glob("Pods/AWSCore/AWSCore/FMDB/*.m").each do |path|
+          mm_path = path.sub(/\.m$/, '.mm')
+          FileUtils.mv(path, mm_path) if File.exist?(path)
+        end
+      end
+    end
+
+    # Standard React Native post-install steps
     react_native_post_install(
       installer,
       config[:reactNativePath],

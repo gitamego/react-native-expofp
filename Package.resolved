@@ -1,0 +1,124 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "aws-crt-swift",
+        "repositoryURL": "https://github.com/awslabs/aws-crt-swift",
+        "state": {
+          "branch": null,
+          "revision": "5be6550f81c760cceb0a43c30d4149ac55c5640c",
+          "version": "0.52.1"
+        }
+      },
+      {
+        "package": "aws-sdk-swift",
+        "repositoryURL": "https://github.com/awslabs/aws-sdk-swift",
+        "state": {
+          "branch": null,
+          "revision": "1cce80c906deee61784b64ad2de761f773f5418f",
+          "version": "1.3.16"
+        }
+      },
+      {
+        "package": "CrowdConnectedCoreBluetooth",
+        "repositoryURL": "https://github.com/crowdconnected/crowdconnected-core-bluetooth-ios",
+        "state": {
+          "branch": null,
+          "revision": "623493f0a7a4badc418acde3e3a5f446d0c11ea1",
+          "version": "2.1.2"
+        }
+      },
+      {
+        "package": "CrowdConnectedCore",
+        "repositoryURL": "https://github.com/crowdconnected/crowdconnected-core-ios",
+        "state": {
+          "branch": null,
+          "revision": "ffd37c4e0172a16350e59fc1abad93882f18990e",
+          "version": "2.1.2"
+        }
+      },
+      {
+        "package": "CrowdConnectedGeo",
+        "repositoryURL": "https://github.com/crowdconnected/crowdconnected-geo-ios",
+        "state": {
+          "branch": null,
+          "revision": "61e4d743e8cd4c84cdc6ea5d93aae3fe455fccf8",
+          "version": "2.1.2"
+        }
+      },
+      {
+        "package": "CrowdConnectedIPS",
+        "repositoryURL": "https://github.com/crowdconnected/crowdconnected-ips-ios",
+        "state": {
+          "branch": null,
+          "revision": "fce487639d6565349600d46c66dd904c11982435",
+          "version": "2.1.2"
+        }
+      },
+      {
+        "package": "CrowdConnectedShared",
+        "repositoryURL": "https://github.com/crowdconnected/crowdconnected-shared-ios",
+        "state": {
+          "branch": null,
+          "revision": "b46b03cf3b53398b014e530ca95f3b05b2e1afcc",
+          "version": "2.1.2"
+        }
+      },
+      {
+        "package": "ExpoFpCommon",
+        "repositoryURL": "https://github.com/expofp/expofp-common-ios-spm",
+        "state": {
+          "branch": null,
+          "revision": "e98f8dfaecb65f1f33cc11027489490d1bab6486",
+          "version": "4.8.18"
+        }
+      },
+      {
+        "package": "ExpoFpCrowdConnected",
+        "repositoryURL": "https://github.com/expofp/expofp-crowdconnected-ios-spm",
+        "state": {
+          "branch": null,
+          "revision": "085e76f39632637bbe13b1f34724ef0c7d6d19aa",
+          "version": "4.8.18"
+        }
+      },
+      {
+        "package": "ExpoFpFplan",
+        "repositoryURL": "https://github.com/expofp/expofp-fplan-ios-spm",
+        "state": {
+          "branch": null,
+          "revision": "beeebcaf8b6c711455e2743b8d8a4c965278b003",
+          "version": "4.8.18"
+        }
+      },
+      {
+        "package": "smithy-swift",
+        "repositoryURL": "https://github.com/smithy-lang/smithy-swift",
+        "state": {
+          "branch": null,
+          "revision": "aa4cb4585232b52f116286e432dca055df698863",
+          "version": "0.131.0"
+        }
+      },
+      {
+        "package": "swift-argument-parser",
+        "repositoryURL": "https://github.com/apple/swift-argument-parser.git",
+        "state": {
+          "branch": null,
+          "revision": "41982a3656a71c768319979febd796c6fd111d5c",
+          "version": "1.5.0"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "3d8596ed08bd13520157f0355e35caed215ffbfa",
+          "version": "1.6.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -23,7 +23,8 @@ import { ExpofpView } from "react-native-expofp";
 
 // ...
 
-<ExpofpView url="https://demo.expofp.com/" />
+ <ExpofpView style={styles.box} settings={{ url: 'http://demo.expofp.com' }} />
+
 ```
 
 ## Contributing

@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.homepage     = package["homepage"]
   s.license      = package["license"]
   s.authors      = package["author"]
+  s.platforms    = { :ios => "15.1" }
 
-  s.platforms    = { :ios => "15.0" }
   s.source       = { :git => "https://github.com/gitamego/react-native-expofp.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"

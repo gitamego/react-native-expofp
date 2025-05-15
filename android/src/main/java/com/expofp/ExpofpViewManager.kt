@@ -25,7 +25,7 @@ import com.facebook.react.uimanager.annotations.ReactProp
 class ExpofpViewManager : SimpleViewManager<View>() {
     private var reactContext: ThemedReactContext? = null
 
-    override fun getName() = "ExpofpView"
+    override fun getName() = "ExpofpViewManager"
 
     override fun createViewInstance(reactContext: ThemedReactContext): View {
         this.reactContext = reactContext
