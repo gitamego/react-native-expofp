@@ -2,6 +2,11 @@
 
 ## [1.0.15](https://github.com/gitamego/react-native-expofp/compare/1.0.14...1.0.15) - 2025-06-05
 - fix(android): include default placeholder icon for location tracking by @arys in https://github.com/gitamego/react-native-expofp/pull/38
+- feat(ios): update ios expofp 4.8.22 by @arys in https://github.com/gitamego/react-native-expofp/pull/40
+- feat(ios): trigger release by @arys in https://github.com/gitamego/react-native-expofp/pull/41
+
+## [1.0.15](https://github.com/gitamego/react-native-expofp/compare/1.0.14...1.0.15) - 2025-06-05
+- fix(android): include default placeholder icon for location tracking by @arys in https://github.com/gitamego/react-native-expofp/pull/38
 
 ## [1.0.14](https://github.com/gitamego/react-native-expofp/compare/1.0.13...1.0.14) - 2025-05-05
 - fix(android): double load by @arys in https://github.com/gitamego/react-native-expofp/pull/36
