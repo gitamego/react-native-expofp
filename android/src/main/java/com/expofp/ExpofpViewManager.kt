@@ -61,6 +61,7 @@ class ExpofpViewManager : SimpleViewManager<View>() {
                         aliases
                 )
                 lpSettings.setServiceNotificationInfo("Background Location is running", R.drawable.placeholder_icon);
+
                 val locationProvider = CrowdConnectedProvider(application, lpSettings)
                 // val locationProvider = CrowdConnectedBackgroundProvider(application, lpSettings)
                 GlobalLocationProvider.init(locationProvider)
