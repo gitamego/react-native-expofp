@@ -81,8 +81,38 @@ struct ExpoFP: View {
         {
             fplanView.onAppear{
                 if (loadedUrl !== dataStore.url) {
-                    fplanView.load(dataStore.url as String, useGlobalLocationProvider: true)
+                    let expoKey = (URL(string: dataStore.url as String)?.host ?? "").components(separatedBy: ".").first ?? ""
+                    print("expoKey: \(expoKey)")
+
+                    if let cachePath = SharedFplanView.getFilePathFromCache() {
+                        let pathComponents = cachePath.absoluteString.components(separatedBy: "/")
+                        let cachedExpoKey = pathComponents[pathComponents.count - 2]
+                        print("cachePath: \(cachePath.absoluteString)")
+                        print("cachedExpoKey: \(cachedExpoKey)")
+                        if cachedExpoKey == expoKey {
+                            print("loading from cache")
+                            fplanView.openFile(htmlFilePathUrl: cachePath, params: nil, settings: ExpoFpFplan.Settings(useGlobalLocationProvider: true))
+                        }
+                    } else if let path = Bundle.main.path(forResource: expoKey, ofType: "zip", inDirectory: "maps") {
+                        print("loading from preloaded map path: \(path)")
+                        fplanView.openZip(path, params: nil, useGlobalLocationProvider: true)
+                    } else {
+                        print("loading from url")
+                        fplanView.load(dataStore.url as String, useGlobalLocationProvider: true)
+                    }
                     loadedUrl = dataStore.url
+                    print("downlpading the map")
+                    fplanView.downloadZipToCache(dataStore.url as String) { htmlFilePath, error in
+                        if let error = error {
+                            print("error doenaloding the map")
+                            print(error)
+                        } else {
+                            print("success downloading the map")
+                            if let htmlFilePath = htmlFilePath {
+                                print("htmlFilePath: \(htmlFilePath)")
+                            }
+                        }
+                    }
                 }
             }.onDisappear{
                 fplanView.clear()

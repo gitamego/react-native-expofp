@@ -91,11 +91,11 @@ dependencies {
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-  implementation 'com.expofp:common:4.10.0'
-  implementation 'com.expofp:fplan:4.10.0'
+  implementation 'com.expofp:common:4.11.0'
+  implementation 'com.expofp:fplan:4.11.0'
 
-  implementation 'com.expofp:crowdconnected:4.10.0'
-  // implementation 'com.expofp:crowdconnectedbackground:4.10.0'
+  implementation 'com.expofp:crowdconnected:4.11.0'
+  // implementation 'com.expofp:crowdconnectedbackground:4.11.0'
   implementation 'net.crowdconnected.android.core:android-core:2.0.2'
   implementation 'net.crowdconnected.android.ips:android-ips:2.0.2'
   implementation 'net.crowdconnected.android.geo:android-geo:2.0.2'
