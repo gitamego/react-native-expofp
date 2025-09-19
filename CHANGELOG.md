@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.16](https://github.com/gitamego/react-native-expofp/compare/1.0.15...1.0.16) - 2025-09-19
+- Feat/map preloading by @arys in https://github.com/gitamego/react-native-expofp/pull/43
+
 ## [1.0.15](https://github.com/gitamego/react-native-expofp/compare/1.0.14...1.0.15) - 2025-06-05
 - fix(android): include default placeholder icon for location tracking by @arys in https://github.com/gitamego/react-native-expofp/pull/38
 - feat(ios): update ios expofp 4.8.22 by @arys in https://github.com/gitamego/react-native-expofp/pull/40
