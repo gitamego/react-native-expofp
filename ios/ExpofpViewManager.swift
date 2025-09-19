@@ -88,7 +88,7 @@ struct ExpoFP: View {
 
         if let cachePath = SharedFplanView.getFilePathFromCache() {
             let pathComponents = cachePath.absoluteString.components(separatedBy: "/")
-            let cachedExpoKey = pathComponents[pathComponents.count - 2]
+            let cachedExpoKey = pathComponents.count >= 2 ? pathComponents[pathComponents.count - 2] : ""
             print("cachePath: \(cachePath.absoluteString)")
             print("cachedExpoKey: \(cachedExpoKey)")
             if cachedExpoKey == key {
@@ -114,7 +114,7 @@ struct ExpoFP: View {
         print("downloading the map")
         fplanView.downloadZipToCache(urlString) { htmlFilePath, error in
             if let error = error {
-                print("error downloading the map: \(error.localizedDescription)")
+                print("error downloading the map: \(error)")
             } else {
                 print("success downloading the map")
                 if let htmlFilePath = htmlFilePath {
