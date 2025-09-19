@@ -1,20 +1,11 @@
 package com.expofp
 
-import android.Manifest
-import android.app.Activity
-import android.app.AlertDialog
 import android.app.Application
-import android.os.Build
 import android.util.Log
 import android.view.View
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat
 import com.expofp.common.GlobalLocationProvider
 import com.expofp.crowdconnected.CrowdConnectedProvider
 import com.expofp.crowdconnected.Mode
-import com.expofp.crowdconnected.Settings
-// import com.expofp.crowdconnectedbackground.CrowdConnectedBackgroundProvider
 import com.expofp.fplan.FplanView
 import com.expofp.fplan.models.FplanViewState
 import com.facebook.react.bridge.ReadableMap
@@ -22,6 +13,8 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.expofp.R
+import com.expofp.fplan.contracts.DownloadOfflinePlanCallback
+import com.expofp.fplan.models.OfflinePlanInfo
 
 class ExpofpViewManager : SimpleViewManager<View>() {
     private var reactContext: ThemedReactContext? = null
@@ -38,6 +31,67 @@ class ExpofpViewManager : SimpleViewManager<View>() {
     override fun onDropViewInstance(view: View) {
         (view as? FplanView)?.destroy()
         super.onDropViewInstance(view)
+    }
+
+    private fun getExpoKeyFromUrl(url: String): String {
+        return url.substringAfter("https://").substringBefore(".expofp.com")
+    }
+
+    private fun openMapForUrl(view: FplanView, url: String) {
+        val expoKey = getExpoKeyFromUrl(url)
+        val settings = com.expofp.fplan.models.Settings().withGlobalLocationProvider()
+
+        val offlinePlanManager = FplanView.getOfflinePlanManager(reactContext)
+        val latestOfflinePlan = offlinePlanManager.allOfflinePlansFromCache
+                .filter { offlinePlanInfo -> offlinePlanInfo.expoKey == expoKey }
+                .maxByOrNull { offlinePlanInfo -> offlinePlanInfo.version }
+
+        if (latestOfflinePlan != null) {
+            Log.d("ExpofpModule", latestOfflinePlan.expoKey)
+            view.openOfflinePlan(latestOfflinePlan, "", settings)
+            return
+        }
+
+        val ctx = this.reactContext ?: run {
+            view.load(url, settings)
+            return
+        }
+
+        val am = ctx.assets
+        val cachePlanExists = try {
+            am.open("${expoKey}.zip").close()
+            true
+        } catch (e: Exception) {
+            false
+        }
+
+        if (cachePlanExists) {
+            try {
+                Log.d("ExpofpModule", "openZipFromAssets: ${expoKey}.zip")
+                view.openZipFromAssets("${expoKey}.zip", "", settings, ctx)
+                return
+            } catch (e: Exception) {
+                Log.d("ExpofpModule", "failed to open asset zip, loading url: $url")
+                view.load(url, settings)
+                return
+            }
+        }
+
+        Log.d("ExpofpModule", "asset zip not found, loading url: $url")
+        view.load(url, settings)
+    }
+
+    private fun triggerOfflinePlanDownload(expoKey: String) {
+        val offlinePlanManager = FplanView.getOfflinePlanManager(reactContext)
+        offlinePlanManager.downloadOfflinePlanToCache(expoKey, object : DownloadOfflinePlanCallback {
+            override fun onCompleted(offlinePlanInfo: OfflinePlanInfo) {
+                Log.d("ExpofpModule", "downloaded offline plan: ${offlinePlanInfo.expoKey} v${offlinePlanInfo.version}")
+            }
+
+            override fun onError(message: String) {
+                Log.e("ExpofpModule", "offline plan download failed: $message")
+            }
+        })
     }
 
     @ReactProp(name = "settings")
@@ -68,7 +122,11 @@ class ExpofpViewManager : SimpleViewManager<View>() {
                 GlobalLocationProvider.start()
             }
             if (view.state.equals(FplanViewState.Created)) {
-                view.load(it.getString("url") ?: "", com.expofp.fplan.models.Settings().withGlobalLocationProvider());
+                val url = it.getString("url") ?: ""
+                val expoKey = getExpoKeyFromUrl(url)
+
+                openMapForUrl(view, url)
+                triggerOfflinePlanDownload(expoKey)
             }
         }
     }
