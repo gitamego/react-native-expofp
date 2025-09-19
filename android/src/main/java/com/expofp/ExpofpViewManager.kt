@@ -15,7 +15,6 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.expofp.R
 import com.expofp.fplan.contracts.DownloadOfflinePlanCallback
 import com.expofp.fplan.models.OfflinePlanInfo
-import android.content.res.AssetManager
 
 class ExpofpViewManager : SimpleViewManager<View>() {
     private var reactContext: ThemedReactContext? = null
@@ -32,6 +31,67 @@ class ExpofpViewManager : SimpleViewManager<View>() {
     override fun onDropViewInstance(view: View) {
         (view as? FplanView)?.destroy()
         super.onDropViewInstance(view)
+    }
+
+    private fun getExpoKeyFromUrl(url: String): String {
+        return url.substringAfter("https://").substringBefore(".expofp.com")
+    }
+
+    private fun openMapForUrl(view: FplanView, url: String) {
+        val expoKey = getExpoKeyFromUrl(url)
+        val settings = com.expofp.fplan.models.Settings().withGlobalLocationProvider()
+
+        val offlinePlanManager = FplanView.getOfflinePlanManager(reactContext)
+        val latestOfflinePlan = offlinePlanManager.allOfflinePlansFromCache
+                .filter { offlinePlanInfo -> offlinePlanInfo.expoKey == expoKey }
+                .maxByOrNull { offlinePlanInfo -> offlinePlanInfo.version }
+
+        if (latestOfflinePlan != null) {
+            Log.d("ExpofpModule", latestOfflinePlan.expoKey)
+            view.openOfflinePlan(latestOfflinePlan, "", settings)
+            return
+        }
+
+        val ctx = this.reactContext ?: run {
+            view.load(url, settings)
+            return
+        }
+
+        val am = ctx.assets
+        val cachePlanExists = try {
+            am.open("${expoKey}.zip").close()
+            true
+        } catch (e: Exception) {
+            false
+        }
+
+        if (cachePlanExists) {
+            try {
+                Log.d("ExpofpModule", "openZipFromAssets: ${expoKey}.zip")
+                view.openZipFromAssets("${expoKey}.zip", "", settings, ctx)
+                return
+            } catch (e: Exception) {
+                Log.d("ExpofpModule", "failed to open asset zip, loading url: $url")
+                view.load(url, settings)
+                return
+            }
+        }
+
+        Log.d("ExpofpModule", "asset zip not found, loading url: $url")
+        view.load(url, settings)
+    }
+
+    private fun triggerOfflinePlanDownload(expoKey: String) {
+        val offlinePlanManager = FplanView.getOfflinePlanManager(reactContext)
+        offlinePlanManager.downloadOfflinePlanToCache(expoKey, object : DownloadOfflinePlanCallback {
+            override fun onCompleted(offlinePlanInfo: OfflinePlanInfo) {
+                Log.d("ExpofpModule", "downloaded offline plan: ${offlinePlanInfo.expoKey} v${offlinePlanInfo.version}")
+            }
+
+            override fun onError(message: String) {
+                Log.e("ExpofpModule", "offline plan download failed: $message")
+            }
+        })
     }
 
     @ReactProp(name = "settings")
@@ -62,54 +122,11 @@ class ExpofpViewManager : SimpleViewManager<View>() {
                 GlobalLocationProvider.start()
             }
             if (view.state.equals(FplanViewState.Created)) {
-                val info = ExpofpModule.downloadedOfflinePlanInfo
                 val url = it.getString("url") ?: ""
-                val expoKey = url.substringAfter("https://").substringBefore(".expofp.com")
+                val expoKey = getExpoKeyFromUrl(url)
 
-                val offlinePlanManager = FplanView.getOfflinePlanManager(reactContext)
-                val latestOfflinePlan = offlinePlanManager.allOfflinePlansFromCache
-                    .filter { offlinePlanInfo -> offlinePlanInfo.expoKey == expoKey }
-                    .maxByOrNull { offlinePlanInfo -> offlinePlanInfo.version }
-                if (latestOfflinePlan != null) {
-                    Log.d("ExpofpModule", latestOfflinePlan.expoKey)
-                    view.openOfflinePlan(latestOfflinePlan, "", com.expofp.fplan.models.Settings().withGlobalLocationProvider())
-                } else {
-                    val ctx = this.reactContext
-                    if (ctx != null) {
-                        val am = ctx.assets
-                        val cachePlanExists = try {
-                            am.open("${expoKey}.zip").close()
-                            true
-                        } catch (e: Exception) {
-                            false
-                        }
-
-                        if (cachePlanExists) {
-                            try {
-                                Log.d("ExpofpModule", "openZipFromAssets: ${'$'}candidate")
-                                view.openZipFromAssets("${expoKey}.zip", "", com.expofp.fplan.models.Settings().withGlobalLocationProvider(), ctx)
-                            } catch (e: Exception) {
-                                Log.d("ExpofpModule", "failed to open asset zip, loading url: ${'$'}url")
-                                view.load(url, com.expofp.fplan.models.Settings().withGlobalLocationProvider())
-                            }
-                        } else {
-                            Log.d("ExpofpModule", "asset zip not found, loading url: ${'$'}url")
-                            view.load(url, com.expofp.fplan.models.Settings().withGlobalLocationProvider())
-                        }
-                    } else {
-                        view.load(url, com.expofp.fplan.models.Settings().withGlobalLocationProvider())
-                    }
-                }
-
-                offlinePlanManager.downloadOfflinePlanToCache(expoKey, object : DownloadOfflinePlanCallback {
-                    override fun onCompleted(offlinePlanInfo: OfflinePlanInfo) {
-                        Log.d("ExpofpModule", "downloaded offline plan: ${'$'}{offlinePlanInfo.expoKey} v${'$'}{offlinePlanInfo.version}")
-                    }
-
-                    override fun onError(message: String) {
-                        Log.e("ExpofpModule", "offline plan download failed: ${'$'}message")
-                    }
-                })
+                openMapForUrl(view, url)
+                triggerOfflinePlanDownload(expoKey)
             }
         }
     }
