@@ -76,43 +76,63 @@ struct ExpoFP: View {
     
     @State private var loadedUrl: NSString? = nil
     
+    private var defaultSettings: ExpoFpFplan.Settings { .init(useGlobalLocationProvider: true) }
+    
+    private func expoKey(from urlString: String) -> String {
+        return (URL(string: urlString)?.host ?? "").components(separatedBy: ".").first ?? ""
+    }
+    
+    private func openMap(for urlString: String) {
+        let key = expoKey(from: urlString)
+        print("expoKey: \(key)")
+
+        if let cachePath = SharedFplanView.getFilePathFromCache() {
+            let pathComponents = cachePath.absoluteString.components(separatedBy: "/")
+            let cachedExpoKey = pathComponents[pathComponents.count - 2]
+            print("cachePath: \(cachePath.absoluteString)")
+            print("cachedExpoKey: \(cachedExpoKey)")
+            if cachedExpoKey == key {
+                print("loading from cache")
+                fplanView.openFile(htmlFilePathUrl: cachePath, params: nil, settings: defaultSettings)
+                return
+            } else {
+                print("cache key mismatch, expected: \(key), found: \(cachedExpoKey)")
+            }
+        }
+
+        if let path = Bundle.main.path(forResource: key, ofType: "zip", inDirectory: "maps") {
+            print("loading from preloaded map path: \(path)")
+            fplanView.openZip(path, params: nil, useGlobalLocationProvider: true)
+            return
+        }
+
+        print("loading from url")
+        fplanView.load(urlString, useGlobalLocationProvider: true)
+    }
+    
+    private func downloadOffline(for urlString: String) {
+        print("downloading the map")
+        fplanView.downloadZipToCache(urlString) { htmlFilePath, error in
+            if let error = error {
+                print("error downloading the map: \(error.localizedDescription)")
+            } else {
+                print("success downloading the map")
+                if let htmlFilePath = htmlFilePath {
+                    print("htmlFilePath: \(htmlFilePath)")
+                }
+            }
+        }
+    }
+    
     var body: some View {
         VStack
         {
             fplanView.onAppear{
-                if (loadedUrl !== dataStore.url) {
-                    let expoKey = (URL(string: dataStore.url as String)?.host ?? "").components(separatedBy: ".").first ?? ""
-                    print("expoKey: \(expoKey)")
-
-                    if let cachePath = SharedFplanView.getFilePathFromCache() {
-                        let pathComponents = cachePath.absoluteString.components(separatedBy: "/")
-                        let cachedExpoKey = pathComponents[pathComponents.count - 2]
-                        print("cachePath: \(cachePath.absoluteString)")
-                        print("cachedExpoKey: \(cachedExpoKey)")
-                        if cachedExpoKey == expoKey {
-                            print("loading from cache")
-                            fplanView.openFile(htmlFilePathUrl: cachePath, params: nil, settings: ExpoFpFplan.Settings(useGlobalLocationProvider: true))
-                        }
-                    } else if let path = Bundle.main.path(forResource: expoKey, ofType: "zip", inDirectory: "maps") {
-                        print("loading from preloaded map path: \(path)")
-                        fplanView.openZip(path, params: nil, useGlobalLocationProvider: true)
-                    } else {
-                        print("loading from url")
-                        fplanView.load(dataStore.url as String, useGlobalLocationProvider: true)
-                    }
+                if loadedUrl != dataStore.url {
+                    let urlString = dataStore.url as String
+                    openMap(for: urlString)
                     loadedUrl = dataStore.url
-                    print("downlpading the map")
-                    fplanView.downloadZipToCache(dataStore.url as String) { htmlFilePath, error in
-                        if let error = error {
-                            print("error doenaloding the map")
-                            print(error)
-                        } else {
-                            print("success downloading the map")
-                            if let htmlFilePath = htmlFilePath {
-                                print("htmlFilePath: \(htmlFilePath)")
-                            }
-                        }
-                    }
+                    downloadOffline(for: urlString)
                 }
             }.onDisappear{
                 fplanView.clear()
