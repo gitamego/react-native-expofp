@@ -96,8 +96,8 @@ dependencies {
 
   implementation 'com.expofp:crowdconnected:4.11.0'
   // implementation 'com.expofp:crowdconnectedbackground:4.11.0'
-  implementation 'net.crowdconnected.android.core:android-core:2.0.2'
-  implementation 'net.crowdconnected.android.ips:android-ips:2.0.2'
-  implementation 'net.crowdconnected.android.geo:android-geo:2.0.2'
+  implementation 'net.crowdconnected.android.core:android-core:2.1.0'
+  implementation 'net.crowdconnected.android.ips:android-ips:2.1.0'
+  implementation 'net.crowdconnected.android.geo:android-geo:2.1.0'
 }
 
