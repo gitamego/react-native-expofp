@@ -10,7 +10,7 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.expofp.crowdconnected.ExpoFpCrowdConnectedLocationProvider
-import com.expofp.crowdconnectedbackground.ExpoFpCrowdConnectedBackgroundLocationProvider
+// import com.expofp.crowdconnectedbackground.ExpoFpCrowdConnectedBackgroundLocationProvider
 import com.expofp.crowdconnected.ExpoFpCrowdConnectedLocationProviderSettings
 import com.expofp.crowdconnected.ExpoFpCrowdConnectedNavigationType
 
@@ -51,18 +51,15 @@ class ExpofpViewManager : SimpleViewManager<ExpoFpView>() {
             token = token,
             secret = secret,
             navigationType = ExpoFpCrowdConnectedNavigationType.ALL,
-            isAllowedInBackground = enableBackground,
+            isAllowedInBackground = false,
             isHeadingEnabled = true,
             aliases = aliases,
             notificationText = "Indoor navigation is active",
             serviceIcon = R.drawable.placeholder_icon
         )
 
-        return if (enableBackground) {
-            ExpoFpCrowdConnectedBackgroundLocationProvider(application, settings)
-        } else {
-            ExpoFpCrowdConnectedLocationProvider(application, settings)
-        }
+        // ExpoFpCrowdConnectedBackgroundLocationProvider(application, settings)
+        return ExpoFpCrowdConnectedLocationProvider(application, settings)
     }
 
     @ReactProp(name = "settings")

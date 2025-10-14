@@ -12,5 +12,6 @@ class ExpofpModule(reactContext: ReactApplicationContext) : ReactContextBaseJava
   @ReactMethod
   fun preload(url: String, promise: Promise) {
       Log.d("ExpofpModule", "preload: not implemented")
+      promise.reject("PRELOAD_UNAVAILABLE", "ExpoFP Android v5 preload is not implemented yet")
   }
 }

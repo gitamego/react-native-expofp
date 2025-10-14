@@ -94,7 +94,7 @@ dependencies {
   implementation 'com.expofp:fplan:5.1.0'
 
   implementation 'com.expofp:crowdconnected:5.1.0'
-  implementation 'com.expofp:crowdconnectedbackground:5.1.0'
+  // implementation 'com.expofp:crowdconnectedbackground:5.1.0'
   implementation 'net.crowdconnected.android.core:android-core:2.1.0'
   implementation 'net.crowdconnected.android.ips:android-ips:2.1.0'
   implementation 'net.crowdconnected.android.geo:android-geo:2.1.0'
