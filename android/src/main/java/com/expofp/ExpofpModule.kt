@@ -22,17 +22,9 @@ object ExpofpUrlUtils {
       null
     } ?: return null
 
-    // Typical: https://sko26.expofp.com/...
     return host.substringBefore(".expofp.com").takeIf { it.isNotBlank() }
   }
 
-  /**
-   * ExpoFP "deep link" slug in query, e.g.:
-   * https://sko26.expofp.com/?mandalay-bay-ballroom-f-level-2
-   *
-   * The Android SDK represents this as a value-less query item, which maps to SearchText
-   * and becomes "?<slug>" when rendered by the SDK.
-   */
   fun extractAdditionalParamsFromUrl(url: String): List<com.expofp.fplan.api.app.model.ExpoFpPlanParameter> {
     val query = try {
       Uri.parse(url).encodedQuery
@@ -83,8 +75,6 @@ class ExpofpModule(reactContext: ReactApplicationContext) : ReactContextBaseJava
 
       val additionalParams = ExpofpUrlUtils.extractAdditionalParamsFromUrl(url)
 
-      // ExpoFP preload creates a WebView internally, so it must run on a thread with a Looper
-      // (in practice: run on the main/UI thread).
       Handler(Looper.getMainLooper()).post {
         try {
           ExpoFpPlan.initialize(context)
