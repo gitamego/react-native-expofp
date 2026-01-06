@@ -34,7 +34,6 @@ object ExpofpUrlUtils {
 
     if (query.isBlank()) return emptyList()
 
-    // Keep it minimal and safe: only support the ExpoFP "?<slug>" style deep-link.
     if (!query.contains("=") && !query.contains("&")) {
       return listOf(com.expofp.fplan.api.app.model.ExpoFpPlanParameter.SearchText(Uri.decode(query)))
     }
