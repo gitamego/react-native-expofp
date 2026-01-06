@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.17](https://github.com/gitamego/react-native-expofp/compare/1.0.16...1.0.17) - 2026-01-06
+- feat(android): add preload by @arys in https://github.com/gitamego/react-native-expofp/pull/47
+
 ## [1.0.16](https://github.com/gitamego/react-native-expofp/compare/1.0.15...1.0.16) - 2025-10-14
 - Feat/map preloading by @arys in https://github.com/gitamego/react-native-expofp/pull/43
 - fix: 16kb update cc version by @arys in https://github.com/gitamego/react-native-expofp/pull/45
