@@ -29,10 +29,6 @@ class ExpofpViewManager : SimpleViewManager<ExpoFpView>() {
         super.onDropViewInstance(view)
     }
 
-    private fun getExpoKeyFromUrl(url: String): String {
-        return url.substringAfter("https://").substringBefore(".expofp.com")
-    }
-
     private fun createCrowdConnectedProvider(settingsMap: ReadableMap): IExpoFpLocationProvider? {
         val context = reactContext?.applicationContext ?: return null
         val application = (context as? Application) ?: return null
@@ -67,10 +63,26 @@ class ExpofpViewManager : SimpleViewManager<ExpoFpView>() {
         if (settingsMap == null) return
         val url = settingsMap.getString("url") ?: return
         val context = reactContext?.applicationContext ?: return
-        val expoKey = getExpoKeyFromUrl(url)
+        val expoKey = ExpofpUrlUtils.getExpoKeyFromUrl(url) ?: return
+        val additionalParams = ExpofpUrlUtils.extractAdditionalParamsFromUrl(url)
 
         ExpoFpPlan.initialize(context)
-        val p = ExpoFpPlan.createPlanPresenter(planLink = ExpoFpLinkType.ExpoKey(expoKey))
+        val preloadedPresenter = try {
+            val preloadedInfo = ExpofpPreloadCache.get(expoKey)
+            if (preloadedInfo != null) {
+                // Prefer preloaded presenter if available (faster, can reuse within session).
+                ExpoFpPlan.preloader.getPreloadedPlanPresenter(preloadedInfo)
+            } else {
+                null
+            }
+        } catch (_: Throwable) {
+            null
+        }
+
+        val p = preloadedPresenter ?: ExpoFpPlan.createPlanPresenter(
+            planLink = ExpoFpLinkType.ExpoKey(expoKey),
+            additionalParams = additionalParams
+        )
         val ccProvider = createCrowdConnectedProvider(settingsMap)
         if (ccProvider != null) p.setLocationProvider(ccProvider)
         view.attachPresenter(p)
