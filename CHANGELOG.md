@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.18](https://github.com/gitamego/react-native-expofp/compare/1.0.17...1.0.18) - 2026-01-10
+- fix(ios): expofp same link open by @arys in https://github.com/gitamego/react-native-expofp/pull/49
+
 ## [1.0.17](https://github.com/gitamego/react-native-expofp/compare/1.0.16...1.0.17) - 2026-01-06
 - feat(android): add preload by @arys in https://github.com/gitamego/react-native-expofp/pull/47
 
