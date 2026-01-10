@@ -39,7 +39,16 @@ class ExpoFPViewProxy: UIView {
 
     @objc var settings: NSDictionary = [:] {
         didSet {
-            if let url = settings["url"] as? NSString {
+            let urlString: String?
+            if let url = settings["url"] as? String {
+                urlString = url
+            } else if let url = settings["url"] as? NSString {
+                urlString = url as String
+            } else {
+                urlString = nil
+            }
+
+            if let urlString {
                 if let appKey = settings["appKey"] as? String,
                     let token = settings["token"] as? String,
                     let secret = settings["secret"] as? String {
@@ -51,9 +60,11 @@ class ExpoFPViewProxy: UIView {
                     let locationProvider: LocationProvider = CrowdConnectedProvider(ccSettings);
                     GlobalLocationProvider.initialize(locationProvider)
                     GlobalLocationProvider.start()
-                    dataStore.url = url
+                    dataStore.url = urlString
+                    dataStore.loadRequestId += 1
                 } else {
-                    dataStore.url = url
+                    dataStore.url = urlString
+                    dataStore.loadRequestId += 1
                 }
             }
         }
@@ -66,7 +77,8 @@ class ExpoFPViewProxy: UIView {
 }
 
 class ExpoFPDataStore: ObservableObject {
-    @Published var url: NSString = ""
+    @Published var url: String = ""
+    @Published var loadRequestId: Int = 0
 }
 
 struct ExpoFP: View {
@@ -74,7 +86,7 @@ struct ExpoFP: View {
         
     var fplanView = SharedFplanView()
     
-    @State private var loadedUrl: NSString? = nil
+    @State private var handledRequestId: Int = -1
     
     private var defaultSettings: ExpoFpFplan.Settings { .init(useGlobalLocationProvider: true) }
     
@@ -86,6 +98,11 @@ struct ExpoFP: View {
         let key = expoKey(from: urlString)
         print("expoKey: \(key)")
 
+        // ExpoFP supports passing "params" separately (e.g. deep-link query like "?mandalay-bay-ballroom-f-level-2").
+        // Use the SDK helper to extract the correct params format from the URL.
+        let extractedParams = Helper.getParams(urlString)
+        let paramsOrNil: String? = extractedParams.isEmpty ? nil : extractedParams
+
         if let cachePath = SharedFplanView.getFilePathFromCache() {
             let pathComponents = cachePath.absoluteString.components(separatedBy: "/")
             let cachedExpoKey = pathComponents.count >= 2 ? pathComponents[pathComponents.count - 2] : ""
@@ -93,7 +110,7 @@ struct ExpoFP: View {
             print("cachedExpoKey: \(cachedExpoKey)")
             if cachedExpoKey == key {
                 print("loading from cache")
-                fplanView.openFile(htmlFilePathUrl: cachePath, params: nil, settings: defaultSettings)
+                fplanView.openFile(htmlFilePathUrl: cachePath, params: paramsOrNil, settings: defaultSettings)
                 return
             } else {
                 print("cache key mismatch, expected: \(key), found: \(cachedExpoKey)")
@@ -102,7 +119,7 @@ struct ExpoFP: View {
 
         if let path = Bundle.main.path(forResource: key, ofType: "zip", inDirectory: "maps") {
             print("loading from preloaded map path: \(path)")
-            fplanView.openZip(path, params: nil, useGlobalLocationProvider: true)
+            fplanView.openZip(path, params: paramsOrNil, useGlobalLocationProvider: true)
             return
         }
 
@@ -123,17 +140,26 @@ struct ExpoFP: View {
             }
         }
     }
+
+    private func handleLoadRequestIfNeeded() {
+        let requestId = dataStore.loadRequestId
+        guard requestId != handledRequestId else { return }
+        handledRequestId = requestId
+
+        let urlString = dataStore.url.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !urlString.isEmpty else { return }
+
+        openMap(for: urlString)
+        downloadOffline(for: urlString)
+    }
     
     var body: some View {
         VStack
         {
             fplanView.onAppear{
-                if loadedUrl != dataStore.url {
-                    let urlString = dataStore.url as String
-                    openMap(for: urlString)
-                    loadedUrl = dataStore.url
-                    downloadOffline(for: urlString)
-                }
+                handleLoadRequestIfNeeded()
+            }.onChange(of: dataStore.loadRequestId) { _ in
+                handleLoadRequestIfNeeded()
             }.onDisappear{
                 fplanView.clear()
             }
